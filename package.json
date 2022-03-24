@@ -1,0 +1,26 @@
+{
+    "name": "helsinki_mets",
+    "version": "1.0.0",
+    "description": "Website for the Helsinki Mets",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Christopher Phillips",
+    "license": "MIT",
+    "dependencies": {
+        "sass": "^1.49.9"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.17.8",
+        "@babel/preset-env": "^7.16.11",
+        "autoprefixer": "^10.4.4",
+        "browser-sync": "^2.27.9",
+        "cssnano": "^5.1.5",
+        "gulp": "^4.0.2",
+        "gulp-babel": "^8.0.0",
+        "gulp-dart-sass": "^1.0.2",
+        "gulp-postcss": "^9.0.1",
+        "gulp-terser": "^2.1.0"
+    }
+}
