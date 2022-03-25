@@ -1,3 +1,22 @@
 /* app/scss/layouts/navigation.scss */
 
+@use "../util/" as *;
+
+.nav-container {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: rem(16) rem(0);
+}
+
+nav {
+    display: flex;
+    gap: rem(25);
+    a {
+        text-decoration: none;
+    }
+}
+
 /* End navigation */

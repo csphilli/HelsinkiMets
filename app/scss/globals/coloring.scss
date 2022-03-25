@@ -1,0 +1,27 @@
+/* /app/scss/globals/colors.scss */
+
+:root {
+    --bg-color-base: hsl(0, 0%, 85%);
+    --link-primary: hsl(22, 97%, 52%);
+    --link-primary-hover: hsl(22, 76%, 67%);
+}
+
+.bg-color {
+    background-color: var(--bg-color-base);
+}
+
+header {
+    background-color: black;
+}
+
+.nav-link:link,
+.nav-link:visited {
+    color: var(--link-primary);
+}
+
+.nav-link:hover,
+.nav-link:active {
+    color: var(--link-primary-hover);
+}
+
+/* END COLORS */

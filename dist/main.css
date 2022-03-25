@@ -39,7 +39,8 @@ body {
 
 /* A elements that don't have a class get default styles */
 a:not([class]) {
-  text-decoration-skip-ink: auto;
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
 }
 
 /* Make images easier to work with */
@@ -66,8 +67,10 @@ select {
   *,
 *::before,
 *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
@@ -80,30 +83,103 @@ select {
   font-style: normal;
 }
 /* End of fonts */
+/* /app/scss/globals/colors.scss */
+:root {
+  --bg-color-base: hsl(0, 0%, 85%);
+  --link-primary: hsl(22, 97%, 52%);
+  --link-primary-hover: hsl(22, 76%, 67%);
+}
+
+.bg-color {
+  background-color: var(--bg-color-base);
+}
+
+header {
+  background-color: black;
+}
+
+.nav-link:link,
+.nav-link:visited {
+  color: var(--link-primary);
+}
+
+.nav-link:hover,
+.nav-link:active {
+  color: var(--link-primary-hover);
+}
+
+/* END COLORS */
 /* app/scss/globals/typography.scss */
+:root {
+  --fs1: 3.052rem;
+  --fs2: 2.441rem;
+  --fs3: 1.953rem;
+  --fs4: 1.563rem;
+  --fs5: 1.25rem;
+  --fs6: 1rem;
+  --fs7: 0.8rem;
+  --fs8: 0.64rem;
+  --fs9: 0.512rem;
+  --fs10: 0.41rem;
+  /* pixel equivalents: 
+  	3.052rem/48.83px
+  	2.441rem/39.06px
+  	1.953rem/31.25px
+  	1.563rem/25.00px
+  	1.25rem/20.00px	
+  	1rem/16.00px	
+  	0.8rem/12.80px	
+  	0.64rem/10.24px	
+  	0.512rem/8.19px	
+  	0.41rem/6.55px
+  */
+}
+
 h1 {
   font-family: "astrudregular", sans-serif;
   font-size: 3rem;
 }
 
-p {
-  transition: 1s ease;
+.mets-title {
+  position: relative;
+  letter-spacing: 0.125rem;
+  color: black;
+  -webkit-text-fill-color: red;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #fff;
 }
-p:hover {
-  color: blue;
+
+.nav-link {
+  font-size: var(--fs6);
+  text-transform: uppercase;
+  font-family: sans-serif;
 }
 
 /* End typography */
-/* /app/scss/util/colors.scss */
-:root {
-  --bg-dark: #fff;
-}
-
-/* END COLORS */
-body {
-  background-color: var(--bg-dark);
-}
-
 /* app/scss/layouts/navigation.scss */
+.nav-container {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0rem;
+}
+
+nav {
+  display: flex;
+  gap: 1.5625rem;
+}
+nav a {
+  text-decoration: none;
+}
+
 /* End navigation */
+/* app/scss/layouts/header.scss */
+header {
+  display: flex;
+  justify-content: center;
+}
+
+/* end header */
 /*# sourceMappingURL=main.css.map */
