@@ -4,13 +4,17 @@ const postcss = require("gulp-postcss");
 const cssnano = require("cssnano");
 const terser = require("gulp-terser");
 const browserSync = require("browser-sync").create();
+const babel = require("gulp-babel");
+const autoprefixer = require("autoprefixer");
 
 // Sass task
 function scssTask() {
     return (
         src("app/scss/main.scss", { sourcemaps: true })
             .pipe(sass())
-            // .pipe(postcss([cssnano()]))
+            .pipe(postcss([autoprefixer()]))
+            // .pipe(postcss(cssnano()))
+            // .pipe(postcss([autoprefixer(), cssnano()]))
             .pipe(dest("dist", { sourcemaps: "." }))
     );
 }
@@ -18,6 +22,7 @@ function scssTask() {
 // JS task
 function jsTask() {
     return src("app/js/script.js", { sourcemaps: true })
+        .pipe(babel({ presets: ["@babel/env"] }))
         .pipe(terser())
         .pipe(dest("dist", { sroucemaps: "." }));
 }
@@ -27,6 +32,12 @@ function browserSyncServe(cb) {
     browserSync.init({
         server: {
             baseDir: ".",
+        },
+        notify: {
+            styles: {
+                top: "auto",
+                bottom: "0",
+            },
         },
     });
     cb();
