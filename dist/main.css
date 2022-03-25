@@ -182,4 +182,38 @@ header {
 }
 
 /* end header */
+.hero-content {
+  padding: 1rem 0;
+}
+
+.hero-images-collage {
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--fs1);
+}
+
+.hero-img-1 {
+  width: 50%;
+  transform: translate(20%, 0);
+  z-index: -1;
+}
+
+.hero-img-2 {
+  width: 50%;
+  transform: translate(-15%, 25%);
+  z-index: 0;
+}
+
+.hero-text-container {
+  padding: 0 1rem;
+}
+.hero-text-container h2 {
+  margin-bottom: var(--fs6);
+}
+.hero-text-container p {
+  margin-bottom: var(--fs9);
+}
+.hero-text-container p:last-child {
+  margin-bottom: 0;
+}
 /*# sourceMappingURL=main.css.map */
