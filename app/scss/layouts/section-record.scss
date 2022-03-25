@@ -1,0 +1,25 @@
+// app/scss/layouts/section-record
+
+@use "../util/" as *;
+
+.record-section {
+    margin-bottom: var(--fs6);
+    padding: 0 rem(16);
+
+    h2 {
+        margin-bottom: var(--fs6);
+    }
+
+    .record-outer-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: var(--fs1);
+    }
+
+    .win-loss-container {
+        display: flex;
+    }
+}
+
+// end section-record
