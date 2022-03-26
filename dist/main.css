@@ -123,6 +123,28 @@ footer {
   color: var(--bg-color-light);
 }
 
+.footer-icon {
+  color: var(--link-primary);
+}
+.footer-icon:hover {
+  color: var(--link-primary-hover);
+  cursor: pointer;
+}
+
+.footer-link:link,
+.footer-link:visited {
+  color: var(--link-primary);
+}
+
+.footer-link:hover,
+.footer-link:active {
+  color: var(--link-primary-hover);
+}
+
+.link {
+  color: var(--link-primary);
+}
+
 /* END COLORS */
 /* app/scss/globals/typography.scss */
 :root {
@@ -155,6 +177,16 @@ h1 {
   font-size: 3rem;
 }
 
+h2,
+h3,
+h4 {
+  font-family: "Oswald", sans-serif;
+}
+
+p {
+  font-family: "Montserat", sans-serif;
+}
+
 .mets-title {
   position: relative;
   letter-spacing: 0.125rem;
@@ -167,7 +199,19 @@ h1 {
 .nav-link {
   font-size: var(--fs6);
   text-transform: uppercase;
-  font-family: sans-serif;
+  font-family: "Montserat", sans-serif;
+}
+
+.footer-link {
+  font-family: "Montserat", sans-serif;
+  font-size: var(--fs7);
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.link {
+  font-family: "Montserat", sans-serif;
+  text-decoration: none;
 }
 
 /* End typography */
@@ -200,7 +244,7 @@ header {
 /* end header */
 .hero-section {
   position: relative;
-  padding: var(--fs4) 0;
+  padding: var(--fs1) var(--fs6);
 }
 .hero-section .divider-top {
   position: absolute;
@@ -240,9 +284,6 @@ header {
   transform: translate(-15%, 25%);
   z-index: 0;
 }
-.hero-section .hero-content .hero-text-container {
-  padding: 0 1rem;
-}
 .hero-section .hero-content .hero-text-container h2 {
   margin-bottom: var(--fs6);
 }
@@ -251,62 +292,6 @@ header {
 }
 .hero-section .hero-content .hero-text-container p:last-child {
   margin-bottom: 0;
-}
-
-.record-section {
-  position: relative;
-  padding: var(--fs4) var(--fs6);
-}
-.record-section .divider {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-}
-.record-section .divider-icon {
-  display: block;
-  width: calc(103% + 1.3px);
-  height: 30px;
-  transform: rotateY(180deg);
-}
-.record-section h2 {
-  margin-bottom: var(--fs6);
-}
-.record-section .record-outer-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: var(--fs1);
-}
-.record-section .win-loss-container {
-  display: flex;
-}
-
-.schedule-section {
-  padding: 0 var(--fs6);
-}
-.schedule-section h3, .schedule-section p {
-  margin-bottom: var(--fs6);
-}
-
-.schedule-grid {
-  display: flex;
-  flex-direction: column;
-}
-.schedule-grid .g-item {
-  border: 1px solid purple;
-}
-
-.grid-col {
-  display: grid;
-  grid-template-columns: 3rem 3.5rem 1fr 4rem;
-  border: 1px solid red;
-}
-
-.schedule-game-row:nth-child(even) {
-  background-color: yellow;
 }
 
 .about-section {
@@ -353,6 +338,55 @@ header {
 .contact-section .contact-text h3,
 .contact-section .contact-text p {
   margin-bottom: var(--fs6);
+}
+
+.main-section {
+  padding: var(--fs5) var(--fs6) var(--fs2) var(--fs6);
+}
+.main-section .schedule-section h3, .main-section .schedule-section p {
+  margin-bottom: var(--fs6);
+}
+.main-section .schedule-grid {
+  display: flex;
+  flex-direction: column;
+}
+.main-section .schedule-grid .g-item {
+  border: 1px solid purple;
+}
+.main-section .grid-col {
+  display: grid;
+  grid-template-columns: 3rem 3.5rem 1fr 4rem;
+  border: 1px solid red;
+}
+.main-section .schedule-game-row:nth-child(even) {
+  background-color: yellow;
+}
+.main-section .record-section {
+  position: relative;
+}
+.main-section .record-section .divider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+.main-section .record-section .divider-icon {
+  display: block;
+  width: calc(103% + 1.3px);
+  height: 30px;
+  transform: rotateY(180deg);
+}
+.main-section .record-section .record-outer-container {
+  padding: var(--fs4) 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--fs1);
+}
+.main-section .record-section .win-loss-container {
+  display: flex;
 }
 
 footer {

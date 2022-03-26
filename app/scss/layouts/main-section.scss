@@ -1,0 +1,62 @@
+@use "../util/" as *;
+
+.main-section {
+    // h2 font-family Oswald isn't lining up in the center. Having to give special padding to the bottom of this section to compensate.
+    padding: var(--fs5) var(--fs6) var(--fs2) var(--fs6);
+    .schedule-section {
+        & h3,
+        & p {
+            margin-bottom: var(--fs6);
+        }
+    }
+
+    .schedule-grid {
+        display: flex;
+        flex-direction: column;
+        .g-item {
+            border: 1px solid purple;
+        }
+    }
+
+    .grid-col {
+        display: grid;
+        grid-template-columns: rem(48) rem(56) 1fr rem(64);
+        border: 1px solid red;
+    }
+
+    .schedule-game-row:nth-child(even) {
+        background-color: yellow;
+    }
+
+    .record-section {
+        position: relative;
+
+        .divider {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+        }
+
+        .divider-icon {
+            display: block;
+            width: calc(103% + 1.3px);
+            height: 30px;
+            transform: rotateY(180deg);
+        }
+
+        .record-outer-container {
+            padding: var(--fs4) 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: var(--fs1);
+        }
+
+        .win-loss-container {
+            display: flex;
+        }
+    }
+}

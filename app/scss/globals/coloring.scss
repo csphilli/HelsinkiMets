@@ -39,4 +39,27 @@ footer {
     color: var(--bg-color-light);
 }
 
+.footer-icon {
+    color: var(--link-primary);
+
+    &:hover {
+        color: var(--link-primary-hover);
+        cursor: pointer;
+    }
+}
+
+.footer-link:link,
+.footer-link:visited {
+    color: var(--link-primary);
+}
+
+.footer-link:hover,
+.footer-link:active {
+    color: var(--link-primary-hover);
+}
+
+.link {
+    color: var(--link-primary);
+}
+
 /* END COLORS */

@@ -4,6 +4,13 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Oswald:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+
         <link rel="stylesheet" href="/dist/main.css" />
         <script defer src="/dist/script.js"></script>
 
@@ -14,10 +21,10 @@
             <div class="nav-container">
                 <h1 class="mets-title">Helsinki Mets</h1>
                 <nav>
-                    <a href="#" class="nav-link">home</a>
-                    <a href="#" class="nav-link">about</a>
-                    <a href="#" class="nav-link">schedule</a>
-                    <a href="#" class="nav-link">contact</a>
+                    <a href="#" class="link nav-link">home</a>
+                    <a href="#" class="link nav-link">about</a>
+                    <a href="#" class="link nav-link">schedule</a>
+                    <a href="#" class="link nav-link">contact</a>
                 </nav>
             </div>
         </header>
@@ -59,8 +66,9 @@
                     <p>
                         Would you like to play with us? Or just know more about
                         the league here? What's involved? Any question you have,
-                        head on over to the <a href="#">contact</a> page and
-                        send us a message.
+                        head on over to the
+                        <a class="link" href="#">contact</a> page and send us a
+                        message.
                     </p>
                 </div>
             </div>
@@ -80,7 +88,7 @@
             </div>
         </section>
         <main class="main-section">
-            <section class="record-section">
+            <div class="record-section">
                 <h2>2022 Season Info</h2>
                 <div class="record-outer-container">
                     <div class="title-container">
@@ -96,23 +104,99 @@
                         </h3>
                     </div>
                 </div>
-            </section>
-            <section class="schedule-section">
+            </div>
+            <div class="schedule-section">
                 <div class="schedule-text-content">
                     <h3>Game Schedule</h3>
                     <p>
                         This is the current schedule for the season. If you'd
-                        like to come to a game but are unsure where the field
-                        is, please visit the
-                        <a href="#">field locations</a> page.
+                        like to come to a game but are unsure about where the
+                        field is, please visit the
+                        <a class="link" href="#">field locations</a> page.
                     </p>
                 </div>
                 <div class="schedule-grid">
                     <div class="grid-col schedule-heading">
-                        <div class="g-item col-heading">Date</div>
+                        <h4 class="g-item col-heading">Date</h4>
+                        <h4 class="g-item col-heading">Time</h4>
+                        <h4 class="g-item col-heading">Teams</h4>
+                        <h4 class="g-item col-heading">Score</h4>
+                        <!-- <div class="g-item col-heading">Date</div>
                         <div class="g-item col-heading">Time</div>
                         <div class="g-item col-heading">Teams</div>
-                        <div class="g-item col-heading">Score</div>
+                        <div class="g-item col-heading">Score</div> -->
+                    </div>
+                    <div class="grid-col schedule-game-row">
+                        <div class="game-date">22-3</div>
+                        <div class="game-time">18:30</div>
+                        <div class="game-teams">Mets @ Puumat</div>
+                        <div class="game-score">5-50</div>
+                    </div>
+                    <div class="grid-col schedule-game-row">
+                        <div class="game-date">22-3</div>
+                        <div class="game-time">18:30</div>
+                        <div class="game-teams">@ Puumat</div>
+                        <div class="game-score">--</div>
+                    </div>
+                    <div class="grid-col schedule-game-row">
+                        <div class="game-date">22-3</div>
+                        <div class="game-time">18:30</div>
+                        <div class="game-teams">@ Puumat</div>
+                        <div class="game-score">--</div>
+                    </div>
+                    <div class="grid-col schedule-game-row">
+                        <div class="game-date">22-3</div>
+                        <div class="game-time">18:30</div>
+                        <div class="game-teams">@ Puumat</div>
+                        <div class="game-score">--</div>
+                    </div>
+                    <div class="grid-col schedule-game-row">
+                        <div class="game-date">22-3</div>
+                        <div class="game-time">18:30</div>
+                        <div class="game-teams">Mets @ Puumat</div>
+                        <div class="game-score">5-50</div>
+                    </div>
+                    <div class="grid-col schedule-game-row">
+                        <div class="game-date">22-3</div>
+                        <div class="game-time">18:30</div>
+                        <div class="game-teams">@ Puumat</div>
+                        <div class="game-score">--</div>
+                    </div>
+                    <div class="grid-col schedule-game-row">
+                        <div class="game-date">22-3</div>
+                        <div class="game-time">18:30</div>
+                        <div class="game-teams">@ Puumat</div>
+                        <div class="game-score">--</div>
+                    </div>
+                    <div class="grid-col schedule-game-row">
+                        <div class="game-date">22-3</div>
+                        <div class="game-time">18:30</div>
+                        <div class="game-teams">@ Puumat</div>
+                        <div class="game-score">--</div>
+                    </div>
+                    <div class="grid-col schedule-game-row">
+                        <div class="game-date">22-3</div>
+                        <div class="game-time">18:30</div>
+                        <div class="game-teams">Mets @ Puumat</div>
+                        <div class="game-score">5-50</div>
+                    </div>
+                    <div class="grid-col schedule-game-row">
+                        <div class="game-date">22-3</div>
+                        <div class="game-time">18:30</div>
+                        <div class="game-teams">@ Puumat</div>
+                        <div class="game-score">--</div>
+                    </div>
+                    <div class="grid-col schedule-game-row">
+                        <div class="game-date">22-3</div>
+                        <div class="game-time">18:30</div>
+                        <div class="game-teams">@ Puumat</div>
+                        <div class="game-score">--</div>
+                    </div>
+                    <div class="grid-col schedule-game-row">
+                        <div class="game-date">22-3</div>
+                        <div class="game-time">18:30</div>
+                        <div class="game-teams">@ Puumat</div>
+                        <div class="game-score">--</div>
                     </div>
                     <div class="grid-col schedule-game-row">
                         <div class="game-date">22-3</div>
@@ -139,7 +223,7 @@
                         <div class="game-score">--</div>
                     </div>
                 </div>
-            </section>
+            </div>
         </main>
         <section class="about-section">
             <div class="divider-top">
@@ -169,10 +253,10 @@
                 <h3>Questions? Want to join us?</h3>
                 <p>
                     Whatever is on your mind, don't hesitate to ask. Fill out
-                    the contact form and we'll get back to you asap.
+                    the <a href="#" class="link">contact form</a> and we'll get
+                    back to you asap.
                 </p>
             </div>
-            <form action="">Contact form</form>
             <div class="divider-bottom">
                 <svg
                     class="divider-icon"
@@ -238,13 +322,19 @@
                 </div>
                 <div class="external-links-container">
                     <h4 class="grid-title">External Links</h4>
-                    <a href="#" class="footer-link">Baseball Finland</a>
-                    <a href="#" class="footer-link">League Standings</a>
-                    <a href="#" class="footer-link">Full League Schedule</a>
+                    <a href="#" class="link footer-link">Baseball Finland</a>
+                    <a href="#" class="link footer-link">League Standings</a>
+                    <a href="#" class="link footer-link"
+                        >Full League Schedule</a
+                    >
                 </div>
                 <div class="site-author-container">
                     <h4 class="grid-title">Site by</h4>
-                    <a href="http://www.project3.io" target="_blank">
+                    <a
+                        class="link footer-link"
+                        href="http://www.project3.io"
+                        target="_blank"
+                    >
                         Project3.io</a
                     >
                 </div>

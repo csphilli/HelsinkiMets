@@ -2,7 +2,7 @@
 
 .hero-section {
     position: relative;
-    padding: var(--fs4) 0;
+    padding: var(--fs1) var(--fs6);
 
     .divider-top {
         position: absolute;
@@ -49,8 +49,6 @@
         }
 
         .hero-text-container {
-            padding: 0 rem(16);
-
             & h2 {
                 margin-bottom: var(--fs6);
             }
