@@ -10,23 +10,33 @@
         }
     }
 
-    .schedule-grid {
-        display: flex;
-        flex-direction: column;
-        .g-item {
-            border: 1px solid purple;
-        }
-    }
+    // .schedule-grid {
+    //     display: flex;
+    //     flex-direction: column;
+    //     p {
+    //         margin: 0;
+    //     }
 
-    .grid-col {
-        display: grid;
-        grid-template-columns: rem(48) rem(56) 1fr rem(64);
-        border: 1px solid red;
-    }
+    //     .grid-col {
+    //         display: grid;
+    //         grid-template-columns: rem(48) rem(56) 1fr rem(64);
+    //         border: 1px solid red;
+    //     }
 
-    .schedule-game-row:nth-child(even) {
-        background-color: yellow;
-    }
+    //     .schedule-heading {
+    //         border-top-left-radius: rem(8);
+    //         border-top-right-radius: rem(8);
+    //     }
+
+    //     .schedule-game-row:nth-child(even) {
+    //         background-color: yellow;
+    //     }
+
+    //     .schedule-game-row:last-child {
+    //         border-bottom-left-radius: rem(8);
+    //         border-bottom-right-radius: rem(8);
+    //     }
+    // }
 
     .record-section {
         position: relative;
