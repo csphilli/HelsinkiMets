@@ -3,8 +3,25 @@
 @use "../util/" as *;
 
 .record-section {
+    position: relative;
     margin-bottom: var(--fs6);
-    padding: 0 rem(16);
+    padding: var(--fs4) var(--fs6);
+
+    .divider {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+    }
+
+    .divider-icon {
+        display: block;
+        width: calc(103% + 1.3px);
+        height: 30px;
+        transform: rotateY(180deg);
+    }
 
     h2 {
         margin-bottom: var(--fs6);

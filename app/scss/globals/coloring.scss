@@ -1,7 +1,8 @@
 /* /app/scss/globals/colors.scss */
 
 :root {
-    --bg-color-base: hsl(0, 0%, 85%);
+    --bg-color-light: rgb(217, 217, 217);
+    --bg-color-dark: hsl(0, 0%, 10%);
     --link-primary: hsl(22, 97%, 52%);
     --link-primary-hover: hsl(22, 76%, 67%);
 }
@@ -11,7 +12,7 @@
 }
 
 header {
-    background-color: black;
+    background-color: var(--bg-color-dark);
 }
 
 .nav-link:link,
@@ -22,6 +23,20 @@ header {
 .nav-link:hover,
 .nav-link:active {
     color: var(--link-primary-hover);
+}
+
+.divider-icon {
+    fill: var(--bg-color-dark);
+}
+
+.main-section {
+    background-color: var(--bg-color-dark);
+    color: var(--bg-color-light);
+}
+
+footer {
+    background-color: var(--bg-color-dark);
+    color: var(--bg-color-light);
 }
 
 /* END COLORS */

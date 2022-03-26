@@ -1,8 +1,7 @@
 @use "../util/" as *;
 
 .schedule-section {
-    padding: 0 var(--fs6);
-    margin-bottom: var(--fs6);
+    padding: var(--fs4) var(--fs6);
     & h3,
     & p {
         margin-bottom: var(--fs6);

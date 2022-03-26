@@ -1,0 +1,30 @@
+@use "../util/" as *;
+
+.contact-section {
+    padding: var(--fs4) var(--fs6);
+    position: relative;
+
+    .divider-bottom {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+        transform: rotate(180deg);
+    }
+
+    .divider-icon {
+        display: block;
+        width: calc(103% + 1.3px);
+        height: 30px;
+        transform: rotateY(180deg);
+    }
+
+    .contact-text {
+        h3,
+        p {
+            margin-bottom: var(--fs6);
+        }
+    }
+}

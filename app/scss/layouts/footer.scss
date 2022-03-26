@@ -1,0 +1,43 @@
+@use "../util/" as *;
+
+footer {
+    padding: 0 var(--fs6);
+}
+
+.upper-footer-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: var(--fs2);
+    padding: var(--fs5) 0;
+
+    a {
+        text-decoration: none;
+    }
+
+    .pages-container,
+    .external-links-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .external-links-container {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+    }
+
+    .footer-icon {
+        width: rem(20);
+        height: auto;
+        margin-right: rem(5);
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    .grid-title {
+        display: relative;
+        margin-bottom: rem(16);
+    }
+}
