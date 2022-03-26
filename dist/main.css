@@ -255,7 +255,6 @@ header {
 
 .record-section {
   position: relative;
-  margin-bottom: var(--fs6);
   padding: var(--fs4) var(--fs6);
 }
 .record-section .divider {
@@ -286,7 +285,7 @@ header {
 }
 
 .schedule-section {
-  padding: var(--fs4) var(--fs6);
+  padding: 0 var(--fs6);
 }
 .schedule-section h3, .schedule-section p {
   margin-bottom: var(--fs6);
