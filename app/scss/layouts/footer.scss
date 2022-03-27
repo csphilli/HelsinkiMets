@@ -1,46 +1,29 @@
 @use "../util/" as *;
 
-// footer {
-//     padding: 0 var(--fs6);
-//     display: grid;
-//     grid-template-columns: repeat(2, 1fr);
-// }
-
-// .pages-container {
-//     display: flex;
-//     flex-direction: column;
-//     .footer-link {
-//         border: 1px solid yellow;
-//     }
-// }
-
-footer {
-    padding: var(--fs4) var(--fs6);
+.footer-grid-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: var(--fs2);
+    max-width: rem(350);
+    padding: 2em;
+    gap: 2em;
+    margin: 0 auto;
+    // justify-content: center;
 
-    .footer-links {
-        margin: 0;
-        padding: 0;
-    }
-
-    .external-links-container {
-        grid-column: 2 / 3;
-        grid-row: 1 / 2;
+    .grid-title {
+        margin-bottom: 0.5em;
     }
 
     .footer-icon {
-        width: rem(20);
-        height: auto;
-        margin-right: rem(5);
-
-        &:last-child {
-            margin-right: 0;
-        }
+        margin-right: 0.5em;
     }
 
-    .grid-title {
-        margin-bottom: rem(16);
+    ul {
+        padding: 0;
+        margin: 0;
+    }
+
+    @include lg {
+        grid-template-columns: repeat(4, 1fr);
+        max-width: rem(700);
     }
 }

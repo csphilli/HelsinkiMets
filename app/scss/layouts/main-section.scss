@@ -24,7 +24,7 @@
         .grid-col {
             display: grid;
             grid-template-columns: rem(48) rem(56) 1fr rem(64);
-            height: var(--fs3);
+            min-height: var(--fs3);
             align-items: center;
         }
 

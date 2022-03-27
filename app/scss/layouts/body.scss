@@ -1,0 +1,6 @@
+@use "../util/" as *;
+
+body {
+    // max-width: 900px;
+    @include flexBox(column, center);
+}
