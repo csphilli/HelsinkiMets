@@ -43,6 +43,10 @@ a:not([class]) {
           text-decoration-skip-ink: auto;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* Make images easier to work with */
 img,
 picture {
@@ -133,16 +137,6 @@ footer {
   cursor: pointer;
 }
 
-.footer-link:link,
-.footer-link:visited {
-  color: var(--team-color-orange);
-}
-
-.footer-link:hover,
-.footer-link:active {
-  color: var(--team-color-orange-hover);
-}
-
 .link {
   color: var(--team-color-orange);
 }
@@ -153,6 +147,16 @@ footer {
 }
 .schedule-grid .schedule-game-row:nth-child(even) {
   background-color: var(--schedule-even-rows);
+}
+
+a:link,
+a:visited {
+  color: var(--team-color-orange);
+}
+
+a:hover,
+a:active {
+  color: var(--team-color-orange-hover);
 }
 
 /* END COLORS */
@@ -395,38 +399,28 @@ header {
 }
 
 footer {
-  padding: 0 var(--fs6);
-}
-
-.upper-footer-container {
+  padding: var(--fs4) var(--fs6);
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, auto);
   gap: var(--fs2);
-  padding: var(--fs5) 0;
 }
-.upper-footer-container a {
-  text-decoration: none;
+footer .footer-links {
+  margin: 0;
+  padding: 0;
 }
-.upper-footer-container .pages-container,
-.upper-footer-container .external-links-container {
-  display: flex;
-  flex-direction: column;
-}
-.upper-footer-container .external-links-container {
+footer .external-links-container {
   grid-column: 2/3;
   grid-row: 1/2;
 }
-.upper-footer-container .footer-icon {
+footer .footer-icon {
   width: 1.25rem;
   height: auto;
   margin-right: 0.3125rem;
 }
-.upper-footer-container .footer-icon:last-child {
+footer .footer-icon:last-child {
   margin-right: 0;
 }
-.upper-footer-container .grid-title {
-  display: relative;
+footer .grid-title {
   margin-bottom: 1rem;
 }
 /*# sourceMappingURL=main.css.map */

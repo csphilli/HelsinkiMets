@@ -50,15 +50,15 @@ footer {
     }
 }
 
-.footer-link:link,
-.footer-link:visited {
-    color: var(--team-color-orange);
-}
+// .footer-link:link,
+// .footer-link:visited {
+//     color: var(--team-color-orange);
+// }
 
-.footer-link:hover,
-.footer-link:active {
-    color: var(--team-color-orange-hover);
-}
+// .footer-link:hover,
+// .footer-link:active {
+//     color: var(--team-color-orange-hover);
+// }
 
 .link {
     color: var(--team-color-orange);
@@ -71,6 +71,16 @@ footer {
     .schedule-game-row:nth-child(even) {
         background-color: var(--schedule-even-rows);
     }
+}
+
+a:link,
+a:visited {
+    color: var(--team-color-orange);
+}
+
+a:hover,
+a:active {
+    color: var(--team-color-orange-hover);
 }
 
 /* END COLORS */

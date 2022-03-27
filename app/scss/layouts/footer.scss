@@ -1,24 +1,28 @@
 @use "../util/" as *;
 
-footer {
-    padding: 0 var(--fs6);
-}
+// footer {
+//     padding: 0 var(--fs6);
+//     display: grid;
+//     grid-template-columns: repeat(2, 1fr);
+// }
 
-.upper-footer-container {
+// .pages-container {
+//     display: flex;
+//     flex-direction: column;
+//     .footer-link {
+//         border: 1px solid yellow;
+//     }
+// }
+
+footer {
+    padding: var(--fs4) var(--fs6);
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, auto);
     gap: var(--fs2);
-    padding: var(--fs5) 0;
 
-    a {
-        text-decoration: none;
-    }
-
-    .pages-container,
-    .external-links-container {
-        display: flex;
-        flex-direction: column;
+    .footer-links {
+        margin: 0;
+        padding: 0;
     }
 
     .external-links-container {
@@ -37,7 +41,6 @@ footer {
     }
 
     .grid-title {
-        display: relative;
         margin-bottom: rem(16);
     }
 }
