@@ -253,6 +253,7 @@ header {
   width: 100%;
   overflow: hidden;
   line-height: 0;
+  transform: rotate(0deg);
 }
 .hero-section .divider-bottom {
   position: absolute;
@@ -305,6 +306,7 @@ header {
   width: 100%;
   overflow: hidden;
   line-height: 0;
+  transform: rotate(0deg);
 }
 .about-section .divider-icon {
   display: block;
@@ -348,20 +350,6 @@ header {
 }
 .main-section .record-section {
   position: relative;
-}
-.main-section .record-section .divider {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-}
-.main-section .record-section .divider-icon {
-  display: block;
-  width: calc(103% + 1.3px);
-  height: 30px;
-  transform: rotateY(180deg);
 }
 .main-section .record-section .record-outer-container {
   padding: var(--fs4) 0;

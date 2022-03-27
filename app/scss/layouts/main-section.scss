@@ -43,22 +43,6 @@
     .record-section {
         position: relative;
 
-        .divider {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            overflow: hidden;
-            line-height: 0;
-        }
-
-        .divider-icon {
-            display: block;
-            width: calc(103% + 1.3px);
-            height: 30px;
-            transform: rotateY(180deg);
-        }
-
         .record-outer-container {
             padding: var(--fs4) 0;
             display: flex;

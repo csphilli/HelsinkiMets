@@ -1,0 +1,25 @@
+@mixin divider-icon {
+    display: block;
+    width: calc(103% + 1.3px);
+    height: 30px;
+    transform: rotateY(180deg);
+}
+
+@mixin divider($property: top, $rotate: 0) {
+    position: absolute;
+    #{$property}: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(#{$rotate}deg);
+}
+
+// .divider-top {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     overflow: hidden;
+//     line-height: 0;
+// }
