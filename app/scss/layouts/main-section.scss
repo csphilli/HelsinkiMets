@@ -12,33 +12,26 @@
 
     // Work on setting up a grid layout for the game schedule.
 
-    // .schedule-grid {
-    //     display: flex;
-    //     flex-direction: column;
-    //     p {
-    //         margin: 0;
-    //     }
+    .schedule-grid {
+        display: flex;
+        flex-direction: column;
+        border-radius: var(--fs9);
+        overflow: hidden;
+        p {
+            margin: 0;
+        }
 
-    //     .grid-col {
-    //         display: grid;
-    //         grid-template-columns: rem(48) rem(56) 1fr rem(64);
-    //         border: 1px solid red;
-    //     }
+        .grid-col {
+            display: grid;
+            grid-template-columns: rem(48) rem(56) 1fr rem(64);
+            height: var(--fs3);
+            align-items: center;
+        }
 
-    //     .schedule-heading {
-    //         border-top-left-radius: rem(8);
-    //         border-top-right-radius: rem(8);
-    //     }
-
-    //     .schedule-game-row:nth-child(even) {
-    //         background-color: yellow;
-    //     }
-
-    //     .schedule-game-row:last-child {
-    //         border-bottom-left-radius: rem(8);
-    //         border-bottom-right-radius: rem(8);
-    //     }
-    // }
+        .g-item {
+            padding-left: var(--fs9);
+        }
+    }
 
     .record-section {
         position: relative;
