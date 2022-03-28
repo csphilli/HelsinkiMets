@@ -1,13 +1,11 @@
-@use "../util/" as *;
+@use "../../util/" as *;
 
 .footer-grid-container {
     border: 1px solid red;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    max-width: rem(350);
     padding: 2em;
     gap: 2em;
-    margin: 0 auto;
     justify-content: center;
 
     .grid-title {
@@ -24,10 +22,5 @@
     ul {
         padding: 0;
         margin: 0;
-    }
-
-    @include md {
-        grid-template-columns: repeat(4, 1fr);
-        max-width: rem(700);
     }
 }

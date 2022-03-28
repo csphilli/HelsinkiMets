@@ -1,0 +1,8 @@
+@use "../../util/" as *;
+
+@include md {
+    .container > * {
+        max-width: rem(920);
+        margin: 0 auto;
+    }
+}
