@@ -7,8 +7,6 @@
 }
 
 nav {
-    width: 90%;
-    border: 1px solid red;
     @include flexBox(center, space-between);
-    // gap: rem(25);
+    gap: var(--fs6);
 }
