@@ -234,7 +234,6 @@ p {
 
 /* End typography */
 body {
-  max-width: 900px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -398,12 +397,14 @@ nav {
 }
 
 .footer-grid-container {
+  border: 1px solid red;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   max-width: 21.875rem;
   padding: 2em;
   gap: 2em;
   margin: 0 auto;
+  justify-content: center;
 }
 .footer-grid-container .grid-title {
   margin-bottom: 0.5em;
@@ -411,11 +412,14 @@ nav {
 .footer-grid-container .footer-icon {
   margin-right: 0.5em;
 }
+.footer-grid-container .grid-block {
+  border: 1px solid yellow;
+}
 .footer-grid-container ul {
   padding: 0;
   margin: 0;
 }
-@media (min-width: 960px) {
+@media (min-width: 720px) {
   .footer-grid-container {
     grid-template-columns: repeat(4, 1fr);
     max-width: 43.75rem;

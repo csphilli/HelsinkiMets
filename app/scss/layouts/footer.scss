@@ -1,13 +1,14 @@
 @use "../util/" as *;
 
 .footer-grid-container {
+    border: 1px solid red;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     max-width: rem(350);
     padding: 2em;
     gap: 2em;
     margin: 0 auto;
-    // justify-content: center;
+    justify-content: center;
 
     .grid-title {
         margin-bottom: 0.5em;
@@ -16,13 +17,16 @@
     .footer-icon {
         margin-right: 0.5em;
     }
+    .grid-block {
+        border: 1px solid yellow;
+    }
 
     ul {
         padding: 0;
         margin: 0;
     }
 
-    @include lg {
+    @include md {
         grid-template-columns: repeat(4, 1fr);
         max-width: rem(700);
     }
