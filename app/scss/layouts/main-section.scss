@@ -1,51 +1,54 @@
 @use "../util/" as *;
 
-.main-section {
-    // h2 font-family Oswald isn't lining up in the center. Having to give special padding to the bottom of this section to compensate.
-    padding: var(--fs5) var(--fs6) var(--fs2) var(--fs6);
-    .schedule-section {
-        & h3,
-        & p {
-            margin-bottom: var(--fs6);
-        }
-    }
-
+main {
     // Work on setting up a grid layout for the game schedule.
-
-    .schedule-grid {
-        display: flex;
-        flex-direction: column;
-        border-radius: var(--fs9);
-        overflow: hidden;
-        p {
-            margin: 0;
-        }
-
-        .grid-col {
-            display: grid;
-            grid-template-columns: rem(48) rem(56) 1fr rem(64);
-            min-height: var(--fs3);
-            align-items: center;
-        }
-
-        .g-item {
-            padding-left: var(--fs9);
-        }
-    }
-
-    .record-section {
+    .hero-section {
         position: relative;
+        padding: var(--fs1) var(--fs6);
 
-        .record-outer-container {
-            padding: var(--fs4) 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: var(--fs1);
+        .divider-top {
+            @include divider(top);
+        }
+        .divider-bottom {
+            @include divider(bottom, 180);
         }
 
-        .win-loss-container {
-            display: flex;
+        .divider-icon {
+            @include divider-icon;
+        }
+
+        .hero-content {
+            .hero-images-collage {
+                display: flex;
+                justify-content: center;
+                margin-bottom: var(--fs1);
+            }
+
+            .hero-img-1 {
+                width: 50%;
+                transform: translate(20%, 0);
+                z-index: -1;
+            }
+
+            .hero-img-2 {
+                width: 50%;
+                transform: translate(-15%, 25%);
+                z-index: 0;
+            }
+
+            .hero-text-container {
+                & h2 {
+                    margin-bottom: var(--fs6);
+                }
+
+                & p {
+                    margin-bottom: var(--fs9);
+                }
+
+                & p:last-child {
+                    margin-bottom: 0;
+                }
+            }
         }
     }
 }

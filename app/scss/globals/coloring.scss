@@ -31,7 +31,7 @@ header {
     fill: var(--bg-color-dark);
 }
 
-.main-section {
+aside {
     background-color: var(--bg-color-dark);
     color: var(--bg-color-light);
 }
@@ -49,16 +49,6 @@ footer {
         cursor: pointer;
     }
 }
-
-// .footer-link:link,
-// .footer-link:visited {
-//     color: var(--team-color-orange);
-// }
-
-// .footer-link:hover,
-// .footer-link:active {
-//     color: var(--team-color-orange-hover);
-// }
 
 .link {
     color: var(--team-color-orange);

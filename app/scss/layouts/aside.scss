@@ -1,0 +1,45 @@
+@use "../util/" as *;
+
+// h2 font-family Oswald isn't lining up in the center. Having to give special padding to the bottom of this section to compensate.
+aside {
+    padding: var(--fs5) var(--fs6) var(--fs2) var(--fs6);
+    .schedule-section {
+        & h3,
+        & p {
+            margin-bottom: var(--fs6);
+        }
+    }
+
+    .schedule-grid {
+        display: flex;
+        flex-direction: column;
+        border-radius: var(--fs9);
+        overflow: hidden;
+        p {
+            margin: 0;
+        }
+
+        .grid-col {
+            display: grid;
+            grid-template-columns: rem(48) rem(56) 1fr rem(64);
+            min-height: var(--fs3);
+            align-items: center;
+        }
+
+        .g-item {
+            padding-left: var(--fs9);
+        }
+    }
+
+    .record-outer-container {
+        padding: var(--fs4) 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: var(--fs1);
+    }
+
+    .win-loss-container {
+        display: flex;
+    }
+}

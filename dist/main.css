@@ -119,7 +119,7 @@ header {
   fill: var(--bg-color-dark);
 }
 
-.main-section {
+aside {
   background-color: var(--bg-color-dark);
   color: var(--bg-color-light);
 }
@@ -258,11 +258,11 @@ nav {
   align-items: stretch;
 }
 
-.hero-section {
+main .hero-section {
   position: relative;
   padding: var(--fs1) var(--fs6);
 }
-.hero-section .divider-top {
+main .hero-section .divider-top {
   position: absolute;
   top: 0;
   left: 0;
@@ -271,7 +271,7 @@ nav {
   line-height: 0;
   transform: rotate(0deg);
 }
-.hero-section .divider-bottom {
+main .hero-section .divider-bottom {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -280,72 +280,69 @@ nav {
   line-height: 0;
   transform: rotate(180deg);
 }
-.hero-section .divider-icon {
+main .hero-section .divider-icon {
   display: block;
   width: calc(103% + 1.3px);
   height: 30px;
   transform: rotateY(180deg);
 }
-.hero-section .hero-content .hero-images-collage {
+main .hero-section .hero-content .hero-images-collage {
   display: flex;
   justify-content: center;
   margin-bottom: var(--fs1);
 }
-.hero-section .hero-content .hero-img-1 {
+main .hero-section .hero-content .hero-img-1 {
   width: 50%;
   transform: translate(20%, 0);
   z-index: -1;
 }
-.hero-section .hero-content .hero-img-2 {
+main .hero-section .hero-content .hero-img-2 {
   width: 50%;
   transform: translate(-15%, 25%);
   z-index: 0;
 }
-.hero-section .hero-content .hero-text-container h2 {
+main .hero-section .hero-content .hero-text-container h2 {
   margin-bottom: var(--fs6);
 }
-.hero-section .hero-content .hero-text-container p {
+main .hero-section .hero-content .hero-text-container p {
   margin-bottom: var(--fs9);
 }
-.hero-section .hero-content .hero-text-container p:last-child {
+main .hero-section .hero-content .hero-text-container p:last-child {
   margin-bottom: 0;
 }
 
-.main-section {
+aside {
   padding: var(--fs5) var(--fs6) var(--fs2) var(--fs6);
 }
-.main-section .schedule-section h3, .main-section .schedule-section p {
+aside .schedule-section h3, aside .schedule-section p {
   margin-bottom: var(--fs6);
 }
-.main-section .schedule-grid {
+aside .schedule-grid {
   display: flex;
   flex-direction: column;
   border-radius: var(--fs9);
   overflow: hidden;
 }
-.main-section .schedule-grid p {
+aside .schedule-grid p {
   margin: 0;
 }
-.main-section .schedule-grid .grid-col {
+aside .schedule-grid .grid-col {
   display: grid;
   grid-template-columns: 3rem 3.5rem 1fr 4rem;
   min-height: var(--fs3);
   align-items: center;
 }
-.main-section .schedule-grid .g-item {
+aside .schedule-grid .g-item {
   padding-left: var(--fs9);
 }
-.main-section .record-section {
-  position: relative;
-}
-.main-section .record-section .record-outer-container {
+aside .record-outer-container {
   padding: var(--fs4) 0;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: var(--fs1);
 }
-.main-section .record-section .win-loss-container {
+aside .win-loss-container {
   display: flex;
 }
 
