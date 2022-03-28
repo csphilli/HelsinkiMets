@@ -1,18 +1,22 @@
 @use "../../util/" as *;
 
-main {
-    // Work on setting up a grid layout for the game schedule.
-    .hero-section {
-        .divider-top {
-            @include divider(top);
-        }
-        .divider-bottom {
-            @include divider(bottom, 180);
-        }
+.divider-top {
+    @include divider(top);
+    border: 1px solid red;
+}
 
-        .divider-icon {
-            @include divider-icon;
-        }
+main {
+    position: relative;
+    // Work on setting up a grid layout for the game schedule.
+
+    .divider-bottom {
+        @include divider(bottom, 180);
+    }
+
+    .divider-icon {
+        @include divider-icon;
+    }
+    .hero-section {
         position: relative;
         padding: var(--fs1) var(--fs6);
 

@@ -253,11 +253,7 @@ nav {
   align-items: stretch;
 }
 
-main .hero-section {
-  position: relative;
-  padding: var(--fs1) var(--fs6);
-}
-main .hero-section .divider-top {
+.divider-top {
   position: absolute;
   top: 0;
   left: 0;
@@ -265,8 +261,13 @@ main .hero-section .divider-top {
   overflow: hidden;
   line-height: 0;
   transform: rotate(0deg);
+  border: 1px solid red;
 }
-main .hero-section .divider-bottom {
+
+main {
+  position: relative;
+}
+main .divider-bottom {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -275,11 +276,15 @@ main .hero-section .divider-bottom {
   line-height: 0;
   transform: rotate(180deg);
 }
-main .hero-section .divider-icon {
+main .divider-icon {
   display: block;
   width: calc(103% + 1.3px);
   height: 30px;
   transform: rotateY(180deg);
+}
+main .hero-section {
+  position: relative;
+  padding: var(--fs1) var(--fs6);
 }
 main .hero-section .hero-content .hero-images-collage {
   display: flex;
