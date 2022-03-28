@@ -2,7 +2,12 @@
 
 // h2 font-family Oswald isn't lining up in the center. Having to give special padding to the bottom of this section to compensate.
 aside {
-    padding: var(--fs5) var(--fs6) var(--fs2) var(--fs6);
+    background-color: var(--bg-color-dark);
+    padding: 0 var(--fs6);
+
+    .record-section {
+        margin-bottom: var(--fs6);
+    }
     .schedule-section {
         & h3,
         & p {
@@ -33,15 +38,37 @@ aside {
         }
     }
 
-    .record-outer-container {
-        padding: var(--fs4) 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: var(--fs1);
-    }
-
     .win-loss-container {
-        display: flex;
+        position: relative;
+        @include flexBox(center, center);
+
+        &::before {
+            content: "";
+            position: absolute;
+            z-index: 0;
+            top: 50%;
+            left: 50%;
+            background-color: var(--team-color-orange);
+            width: rem(100);
+            height: rem(50);
+            transform: rotate(-10deg) skew(-5deg) translate(-130%, -185%);
+        }
+
+        &::after {
+            content: "2022";
+            position: absolute;
+            font-family: "astrudregular", sans-serif;
+            font-size: var(--fs2);
+            text-shadow: 1px 2px var(--bg-color-dark);
+            letter-spacing: rem(5);
+            z-index: 1;
+            top: 50%;
+            left: 50%;
+            color: #fff;
+            font-weight: bold;
+            width: rem(100);
+            height: rem(50);
+            transform: rotate(-5deg) translate(-115%, -170%);
+        }
     }
 }

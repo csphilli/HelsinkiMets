@@ -2,20 +2,14 @@
 
 .footer-grid-container {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, rem(125));
     grid-template-rows: 1fr;
     padding: 2em;
     gap: 2em;
-    align-self: center;
     justify-content: center;
-    align-content: center;
 
     .grid-title {
         margin-bottom: 0.5em;
-    }
-
-    .grid-block {
-        border: 1px solid pink;
     }
 
     .footer-icon {
