@@ -236,6 +236,13 @@ nav {
   gap: var(--fs6);
 }
 
+.mets-title {
+  margin: 1.25rem 0;
+  height: auto;
+  width: 50%;
+  z-index: 100;
+}
+
 main .hero-section {
   position: relative;
   padding: var(--fs1) var(--fs6);
@@ -270,7 +277,7 @@ aside {
   padding: 0 var(--fs6);
 }
 aside .record-section {
-  margin-bottom: var(--fs6);
+  margin-bottom: 3.4375rem;
 }
 aside .schedule-section h3, aside .schedule-section p {
   margin-bottom: var(--fs6);

@@ -10,3 +10,10 @@ nav {
     @include flexBox(center, space-between);
     gap: var(--fs6);
 }
+
+.mets-title {
+    margin: rem(20) 0;
+    height: auto;
+    width: 50%;
+    z-index: 100;
+}
