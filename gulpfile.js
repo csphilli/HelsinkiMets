@@ -10,7 +10,10 @@ const autoprefixer = require("autoprefixer");
 // Sass task
 function scssTask() {
     return (
-        src("app/scss/main.scss", { sourcemaps: true })
+        // src("app/scss/main.scss", { sourcemaps: true })
+        src("app/scss/home.scss", {
+            sourcemaps: true,
+        })
             .pipe(sass())
             .pipe(postcss([autoprefixer()]))
             // .pipe(postcss(cssnano()))
