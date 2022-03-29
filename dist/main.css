@@ -92,7 +92,7 @@ select {
   --bg-color-dark: hsl(0, 0%, 10%);
   --team-color-orange: hsl(22, 97%, 52%);
   --team-color-orange-hover: hsl(22, 76%, 67%);
-  --team-color-purple: hsl(300, 100%, 12%);
+  --team-color-purple: hsl(264, 84%, 20%);
   --schedule-even-rows: hsl(0, 0%, 75%);
 }
 
@@ -216,31 +216,7 @@ p {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.25rem;
-}
-.grid-1 {
-  grid-column: 1/-1;
-  grid-row: 1/2;
-}
-.grid-2 {
-  grid-column: 1/-1;
-  grid-row: 2/3;
-}
-.grid-3 {
-  margin-top: 2.5rem;
-  grid-column: 1/-1;
-  grid-row: 3/4;
-}
-.grid-4 {
-  grid-column: 1/-1;
-  grid-row: 4/5;
-}
-.grid-5 {
-  grid-column: 1/-1;
-  grid-row: 5/6;
-}
-.grid-6 {
-  grid-column: 1/-1;
-  grid-row: 6/7;
+  margin: 0 auto;
 }
 
 .nav-container {
@@ -272,12 +248,12 @@ main .hero-section .hero-content .hero-images-collage {
 main .hero-section .hero-content .hero-img-1 {
   width: 50%;
   transform: translate(20%, 0);
-  z-index: -1;
+  z-index: 19;
 }
 main .hero-section .hero-content .hero-img-2 {
   width: 50%;
   transform: translate(-15%, 25%);
-  z-index: 0;
+  z-index: 20;
 }
 main .hero-section .hero-content .hero-text-container h2 {
   margin-bottom: var(--fs6);
@@ -342,7 +318,7 @@ aside .win-loss-container::after {
   position: absolute;
   font-family: "astrudregular", sans-serif;
   font-size: var(--fs2);
-  text-shadow: 1px 2px var(--bg-color-dark);
+  text-shadow: 1px 2px 7px var(--bg-color-dark);
   letter-spacing: 0.3125rem;
   z-index: 1;
   top: 50%;
@@ -407,7 +383,6 @@ aside .win-loss-container::after {
   grid-template-rows: 1fr;
   padding: 2em;
   gap: 2em;
-  justify-content: center;
 }
 .footer-grid-container .grid-title {
   margin-bottom: 0.5em;
@@ -420,31 +395,16 @@ aside .win-loss-container::after {
   margin: 0;
 }
 
-@media (min-width: 0) {
-  .footer-grid-container {
-    grid-template-columns: repeat(2, 7.8125rem);
-  }
-}
 @media (min-width: 720px) {
   .grid {
     grid-template-columns: 1fr 20.9375rem;
     max-width: 56.25rem;
     margin: 0 auto;
   }
-  .grid-1, .grid-2 {
-    grid-column: 1/2;
-  }
   .grid-3 {
+    margin-top: 2.5rem;
     grid-column: 2/3;
     grid-row: 1/5;
-  }
-  .grid-4 {
-    grid-column: 1/2;
-    grid-row: 3/4;
-  }
-  .grid-5 {
-    grid-column: 1/2;
-    grid-row: 4/5;
   }
   .grid-6 {
     grid-column: 1/3;
