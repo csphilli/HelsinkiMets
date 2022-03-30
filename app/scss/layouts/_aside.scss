@@ -1,41 +1,13 @@
-@use "../../util/" as *;
+@use "../util" as *;
+@use "../abstracts" as *;
 
 // h2 font-family Oswald isn't lining up in the center. Having to give special padding to the bottom of this section to compensate.
 aside {
-    background-color: var(--bg-color-dark);
-    padding: 0 var(--fs6);
+    background-color: $bg-color-dark;
+    padding: 0 $fs6;
 
     .record-section {
-        margin-bottom: rem(55);
-    }
-    .schedule-section {
-        & h3,
-        & p {
-            margin-bottom: var(--fs6);
-        }
-    }
-
-    .schedule-grid {
-        display: flex;
-        flex-direction: column;
-        border-radius: var(--fs9);
-        overflow: hidden;
-        max-width: rem(420);
-        margin: 0 auto;
-        p {
-            margin: 0;
-        }
-
-        .grid-col {
-            display: grid;
-            grid-template-columns: rem(48) rem(56) 1fr rem(64);
-            min-height: var(--fs3);
-            align-items: center;
-        }
-
-        .g-item {
-            padding-left: var(--fs9);
-        }
+        margin-bottom: rem(15);
     }
 
     .win-loss-container {
@@ -48,7 +20,7 @@ aside {
             z-index: 0;
             top: 50%;
             left: 50%;
-            background-color: var(--team-color-orange);
+            background-color: $team-color-orange;
             width: rem(100);
             height: rem(50);
             transform: rotate(-10deg) skew(-5deg) translate(-130%, -185%);
@@ -58,8 +30,8 @@ aside {
             content: "2022";
             position: absolute;
             font-family: "astrudregular", sans-serif;
-            font-size: var(--fs2);
-            text-shadow: 1px 2px 7px var(--bg-color-dark);
+            font-size: $fs2;
+            text-shadow: 1px 2px 7px $bg-color-dark;
             letter-spacing: rem(5);
             z-index: 1;
             top: 50%;

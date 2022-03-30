@@ -1,7 +1,8 @@
-@use "../../util/" as *;
+@use "../../util" as *;
+@use "../../abstracts" as *;
 
 .contact-section {
-    padding: var(--fs4) var(--fs6);
+    padding: $fs4 $fs6;
     position: relative;
 
     .divider-bottom {
@@ -15,7 +16,7 @@
     .contact-text {
         h3,
         p {
-            margin-bottom: var(--fs6);
+            margin-bottom: $fs6;
         }
     }
 }

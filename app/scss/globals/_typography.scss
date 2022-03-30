@@ -1,0 +1,42 @@
+// @use "../util/" as *;
+// @use "typescale" as *;
+// @use "font-families" as *;
+// @use "globals" as *;
+@use "../abstracts" as *;
+
+h1 {
+    font-family: "astrudregular", sans-serif;
+    font-size: rem(48);
+}
+
+h2,
+h3,
+h4 {
+    font-family: "Oswald", sans-serif;
+}
+
+p {
+    font-family: "Montserat", sans-serif;
+}
+
+.nav-link {
+    font-size: $fs6;
+    text-transform: uppercase;
+    font-family: "Montserat", sans-serif;
+}
+
+.footer-link {
+    font-family: "Montserat", sans-serif;
+    font-size: $fs7;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.link {
+    font-family: "Montserat", sans-serif;
+    text-decoration: none;
+}
+
+.win-loss-container {
+    font-size: $fs1;
+}

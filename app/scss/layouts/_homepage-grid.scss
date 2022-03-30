@@ -1,0 +1,8 @@
+@use "../util" as *;
+
+.homepage-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: rem(20);
+    margin: 0 auto;
+}

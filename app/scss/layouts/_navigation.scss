@@ -1,4 +1,5 @@
 @use "../util/" as *;
+@use "../abstracts" as *;
 
 .nav-container {
     width: 100%;
@@ -8,12 +9,5 @@
 
 nav {
     @include flexBox(center, space-between);
-    gap: var(--fs6);
-}
-
-.mets-title {
-    margin: rem(20) 0;
-    height: auto;
-    width: 50%;
-    z-index: 100;
+    gap: $fs6;
 }

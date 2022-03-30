@@ -1,7 +1,8 @@
-@use "../../util/" as *;
+@use "../../util" as *;
+@use "../../abstracts" as *;
 
 .about-section {
-    padding: var(--fs1) var(--fs6) var(--fs4) var(--fs6);
+    padding: $fs1 $fs6 $fs4 $fs6;
     position: relative;
 
     .divider-top {

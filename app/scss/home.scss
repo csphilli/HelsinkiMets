@@ -1,2 +1,5 @@
-@use "config";
-@use "pages/home/index";
+// @use "abstracts";
+@use "base";
+@use "globals";
+@use "layouts";
+@use "pages/home";
