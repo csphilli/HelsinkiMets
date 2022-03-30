@@ -11,7 +11,7 @@ const autoprefixer = require("autoprefixer");
 function scssTask() {
     return (
         // src("app/scss/main.scss", { sourcemaps: true })
-        src("app/scss/home.scss", {
+        src(["app/scss/home.scss", "app/scss/field-locations.scss"], {
             sourcemaps: true,
         })
             .pipe(sass())
