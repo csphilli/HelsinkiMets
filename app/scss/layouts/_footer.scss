@@ -1,0 +1,42 @@
+@use "../abstracts" as *;
+
+.footer-grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, rem(125));
+    grid-template-rows: 1fr;
+    padding: 2em;
+    gap: 2em;
+
+    .grid-title {
+        margin-bottom: 0.5em;
+    }
+
+    .footer-icon {
+        margin-right: 0.5em;
+    }
+
+    ul {
+        padding: 0;
+        margin: 0;
+    }
+}
+
+// Media Queries
+
+@include sm {
+    .footer-grid-container {
+        grid-template-columns: repeat(3, 1fr);
+        & .foot-grid-4 {
+            grid-column: 2/3;
+        }
+    }
+}
+
+@include md {
+    .footer-grid-container {
+        grid-template-columns: repeat(4, 1fr);
+        & .foot-grid-4 {
+            grid-column: 4/5;
+        }
+    }
+}

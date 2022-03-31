@@ -7,7 +7,8 @@ const browserSync = require("browser-sync").create();
 const babel = require("gulp-babel");
 const autoprefixer = require("autoprefixer");
 
-const scss_files = ["home", "field-locations"];
+// If ever having to compile multiple files... Just create the main .scss/.js files at the root of app/scsss or app/js respectively and list them here in their respective const declarations (without extensions)
+const scss_files = ["styles"];
 
 const js_files = ["script"];
 
@@ -16,15 +17,13 @@ const files_to_Arr = function (fileArr, extension) {
     const suffix = `.${extension}`;
     let files = [];
     fileArr.forEach((name) => files.push(prefix + name + suffix));
+    console.log("Compiling:", files);
     return files;
 };
 
-console.log(files_to_Arr(scss_files, "scss"));
 // Sass task
 function scssTask() {
     return (
-        // src("app/scss/main.scss", { sourcemaps: true })
-        // src(["app/scss/home.scss", "app/scss/field-locations.scss"], {
         src(files_to_Arr(scss_files, "scss"), {
             sourcemaps: true,
         })
@@ -38,7 +37,6 @@ function scssTask() {
 
 // JS task
 function jsTask() {
-    // return src("app/js/script.js", { sourcemaps: true })
     return src(files_to_Arr(js_files, "js"), { sourcemaps: true })
         .pipe(babel({ presets: ["@babel/env"] }))
         .pipe(terser())

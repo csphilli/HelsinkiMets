@@ -1,0 +1,31 @@
+@use "../abstracts/" as *;
+
+.schedule-section {
+    & h3,
+    & p {
+        margin-bottom: $fs6;
+    }
+}
+
+.schedule-grid {
+    display: flex;
+    flex-direction: column;
+    border-radius: $fs9;
+    overflow: hidden;
+    max-width: rem(420);
+    margin: 0 auto;
+    p {
+        margin: 0;
+    }
+
+    .grid-col {
+        display: grid;
+        grid-template-columns: rem(48) rem(56) 1fr rem(64);
+        min-height: $fs3;
+        align-items: center;
+    }
+
+    .g-item {
+        padding-left: $fs9;
+    }
+}

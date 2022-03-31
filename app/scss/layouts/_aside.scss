@@ -1,0 +1,42 @@
+@use "../abstracts" as *;
+
+// h2 font-family Oswald isn't lining up in the center. Having to give special padding to the bottom of this section to compensate.
+aside {
+    background-color: $bg-color-dark;
+    padding: 0 $fs6;
+
+    .win-loss-container {
+        position: relative;
+        @include flexbox(row, center, center);
+        margin-bottom: rem(55);
+
+        &::before {
+            content: "";
+            position: absolute;
+            z-index: 0;
+            top: 50%;
+            left: 50%;
+            background-color: $team-color-orange;
+            width: rem(100);
+            height: rem(50);
+            transform: rotate(-10deg) skew(-5deg) translate(-130%, -185%);
+        }
+
+        &::after {
+            content: "2022";
+            position: absolute;
+            font-family: "astrudregular", sans-serif;
+            font-size: $fs2;
+            text-shadow: 1px 2px 7px $bg-color-dark;
+            letter-spacing: rem(5);
+            z-index: 1;
+            top: 50%;
+            left: 50%;
+            color: #fff;
+            font-weight: bold;
+            width: rem(100);
+            height: rem(50);
+            transform: rotate(-5deg) translate(-115%, -170%);
+        }
+    }
+}

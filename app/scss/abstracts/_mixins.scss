@@ -23,7 +23,7 @@ $breakpoints: (
     transform: rotate(#{$rotate}deg);
 }
 
-@mixin flexBox($direction: null, $justify: flex-start, $align: stretch) {
+@mixin flexbox($direction: row, $justify: flex-start, $align: stretch) {
     display: flex;
     flex-direction: $direction;
     justify-content: $justify;

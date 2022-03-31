@@ -1,3 +1,2 @@
-@use "font-families";
-@use "coloring";
-@use "typography";
+@forward "coloring";
+@forward "typography";
