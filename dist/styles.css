@@ -218,9 +218,21 @@ nav {
 
 .mets-title {
   margin: 1.25rem 0;
-  height: auto;
-  width: 50%;
+  height: 4.6875rem;
   z-index: 100;
+}
+
+.hero-img-1 {
+  width: 50%;
+  transform: translate(10%, 0);
+  z-index: 0;
+}
+
+.hero-img-2 {
+  --size: rem(250)
+     width: --size;
+  height: --size;
+  transform: translate(-10%, 15%);
 }
 
 aside {
@@ -303,16 +315,6 @@ main .hero-section .hero-content .hero-images-collage {
   display: flex;
   justify-content: center;
   margin-bottom: 3.052rem;
-}
-main .hero-section .hero-content .hero-img-1 {
-  width: 50%;
-  transform: translate(20%, 0);
-  z-index: 19;
-}
-main .hero-section .hero-content .hero-img-2 {
-  width: 50%;
-  transform: translate(-15%, 25%);
-  z-index: 20;
 }
 main .hero-section .hero-content .hero-text-container h2 {
   margin-bottom: 1rem;
