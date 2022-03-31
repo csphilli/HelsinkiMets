@@ -1,4 +1,3 @@
-@use "../util" as *;
 @use "../abstracts" as *;
 
 // h2 font-family Oswald isn't lining up in the center. Having to give special padding to the bottom of this section to compensate.
@@ -6,13 +5,10 @@ aside {
     background-color: $bg-color-dark;
     padding: 0 $fs6;
 
-    .record-section {
-        margin-bottom: rem(15);
-    }
-
     .win-loss-container {
         position: relative;
-        @include flexBox(center, center);
+        @include flexbox(row, center, center);
+        margin-bottom: rem(55);
 
         &::before {
             content: "";

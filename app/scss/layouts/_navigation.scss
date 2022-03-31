@@ -1,13 +1,12 @@
-@use "../util/" as *;
 @use "../abstracts" as *;
 
 .nav-container {
     width: 100%;
-    @include flexBox(column, center, center);
+    @include flexbox(column, center, center);
     padding: rem(16) rem(0);
 }
 
 nav {
-    @include flexBox(center, space-between);
+    @include flexbox(row, center, space-between);
     gap: $fs6;
 }
