@@ -107,7 +107,6 @@ footer {
 }
 .footer-icon:hover {
   color: #eb9a6b;
-  cursor: pointer;
 }
 
 .link:link,
@@ -118,6 +117,7 @@ footer {
 .link:hover,
 .link:active {
   color: #eb9a6b;
+  cursor: pointer;
 }
 
 .schedule-grid {
@@ -175,12 +175,17 @@ p {
 .footer-grid-container .grid-title {
   margin-bottom: 0.5em;
 }
-.footer-grid-container .footer-icon {
-  margin-right: 0.5em;
-}
 .footer-grid-container ul {
   padding: 0;
   margin: 0;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 0.625rem;
 }
 
 @media (min-width: 480px) {
@@ -225,15 +230,52 @@ nav {
   width: 50%;
   transform: translate(10%, 0);
   z-index: 0;
+  filter: drop-shadow(1px 1px 10px rgba(0, 0, 0, 0.3));
 }
 
 .hero-img-2 {
-  --size: rem(250)
-     width: --size;
-  height: --size;
+  width: 15.625rem;
+  height: 15.625rem;
   transform: translate(-10%, 15%);
+  filter: drop-shadow(1px 1px 10px rgba(0, 0, 0, 0.2));
 }
 
+#eye {
+  -webkit-animation: eye-blink 7s infinite;
+          animation: eye-blink 7s infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@-webkit-keyframes eye-blink {
+  90% {
+    transform: none;
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  93% {
+    transform: scaleY(0);
+  }
+  100% {
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+}
+
+@keyframes eye-blink {
+  90% {
+    transform: none;
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  93% {
+    transform: scaleY(0);
+  }
+  100% {
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+}
 aside {
   background-color: #1a1a1a;
   padding: 0 1rem;

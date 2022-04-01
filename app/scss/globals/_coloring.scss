@@ -22,7 +22,6 @@ footer {
 
     &:hover {
         color: $team-color-orange-hover;
-        cursor: pointer; // should be moved.
     }
 }
 
@@ -34,6 +33,7 @@ footer {
 .link:hover,
 .link:active {
     color: $team-color-orange-hover;
+    cursor: pointer;
 }
 
 .schedule-grid {

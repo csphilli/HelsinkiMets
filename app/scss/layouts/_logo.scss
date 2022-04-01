@@ -2,18 +2,40 @@
 
 .mets-title {
     margin: rem(20) 0;
-	height: rem(75);
+    height: rem(75);
 }
 
 .hero-img-1 {
-	width: 50%;
-	transform: translate(10%, 0);
-	z-index: 0;
+    width: 50%;
+    transform: translate(10%, 0);
+    z-index: 0;
+    filter: drop-shadow(1px 1px 10px rgba(0, 0, 0, 0.3));
 }
 
 .hero-img-2 {
-	--size: rem(250)
-    width: --size;
-    height: --size;
-	transform: translate(-10%, 15%);
+    width: rem(250);
+    height: rem(250);
+    transform: translate(-10%, 15%);
+    filter: drop-shadow(1px 1px 10px rgba(0, 0, 0, 0.2));
+}
+
+// Animating baseball finland logo eye blink
+
+#eye {
+    animation: eye-blink 7s infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes eye-blink {
+    90% {
+        transform: none;
+        animation-timing-function: ease-in;
+    }
+    93% {
+        transform: scaleY(0);
+    }
+    100% {
+        animation-timing-function: ease-out;
+    }
 }
