@@ -239,27 +239,58 @@ nav {
   height: 4.6875rem;
 }
 
-.hero-img-1 {
-  width: 50%;
-  transform: translate(10%, 0);
-  z-index: 0;
+.hero-images-collage {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3.052rem;
+  width: 100%;
+}
+.hero-images-collage > * {
+  width: 100%;
+  height: 100%;
   filter: drop-shadow(1px 1px 10px rgba(0, 0, 0, 0.3));
 }
-
-.hero-img-2 {
-  width: 15.625rem;
-  height: 15.625rem;
+.hero-images-collage .hero-img-1 {
+  transform: translate(10%, 0);
+  z-index: 0;
+}
+.hero-images-collage .hero-img-2 {
   transform: translate(-10%, 15%);
-  filter: drop-shadow(1px 1px 10px rgba(0, 0, 0, 0.2));
+}
+
+#eye,
+#ball {
+  transform-origin: center;
+  transform-box: fill-box;
 }
 
 #eye {
   -webkit-animation: eye-blink 7s infinite;
           animation: eye-blink 7s infinite;
-  transform-origin: center;
-  transform-box: fill-box;
 }
 
+#ball {
+  -webkit-animation: ball-roll 7s infinite linear;
+          animation: ball-roll 7s infinite linear;
+}
+
+@-webkit-keyframes ball-roll {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes ball-roll {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 @-webkit-keyframes eye-blink {
   90% {
     transform: none;
@@ -274,7 +305,6 @@ nav {
             animation-timing-function: ease-out;
   }
 }
-
 @keyframes eye-blink {
   90% {
     transform: none;
@@ -390,11 +420,6 @@ footer {
 main .hero-section {
   position: relative;
   padding: 3.052rem 1rem;
-}
-main .hero-section .hero-content .hero-images-collage {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 3.052rem;
 }
 main .hero-section .hero-content .hero-text-container h2 {
   margin-bottom: 1rem;

@@ -40,12 +40,6 @@ main {
         padding: $fs1 $fs6;
 
         .hero-content {
-            .hero-images-collage {
-                display: flex;
-                justify-content: center;
-                margin-bottom: $fs1;
-            }
-
             .hero-text-container {
                 & h2 {
                     margin-bottom: $fs6;
