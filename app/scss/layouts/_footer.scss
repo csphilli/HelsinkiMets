@@ -1,11 +1,29 @@
 @use "../abstracts" as *;
 
-.footer-grid-container {
+// .footer-grid-container {
+
+.internal-links {
+    grid-area: internal;
+}
+.external-links {
+    grid-area: external;
+}
+.social-links {
+    grid-area: social;
+}
+.author-link {
+    grid-area: author;
+}
+
+footer {
     display: grid;
     grid-template-columns: repeat(2, rem(125));
     grid-template-rows: 1fr;
     padding: 2em;
     gap: 2em;
+    grid-template-areas:
+        "internal	external"
+        "social 	author";
 
     .grid-title {
         margin-bottom: 0.5em;
@@ -16,26 +34,25 @@
         margin: 0;
     }
 }
-.social-links {
+
+.social-links-container {
     @include flexbox(row);
     gap: rem(10);
 }
 // Media Queries
 
 @include sm {
-    .footer-grid-container {
+    footer {
         grid-template-columns: repeat(3, 1fr);
-        & .foot-grid-4 {
-            grid-column: 2/3;
-        }
+        grid-template-areas:
+            "internal external social"
+            ".	author	.";
     }
 }
 
 @include md {
-    .footer-grid-container {
+    footer {
         grid-template-columns: repeat(4, 1fr);
-        & .foot-grid-4 {
-            grid-column: 4/5;
-        }
+        grid-template-areas: "internal external social author";
     }
 }
