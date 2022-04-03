@@ -265,6 +265,16 @@ nav {
   transform-box: fill-box;
 }
 
+#eye {
+  -webkit-animation: eye-blink 7s infinite;
+          animation: eye-blink 7s infinite;
+}
+
+#ball {
+  -webkit-animation: ball-roll 7s infinite linear;
+          animation: ball-roll 7s infinite linear;
+}
+
 @-webkit-keyframes ball-roll {
   from {
     transform: rotate(0deg);
@@ -380,17 +390,17 @@ aside .win-loss-container::after {
   flex-direction: column;
   justify-content: flex-start;
   align-items: stretch;
+  gap: 1.25rem;
 }
-.sponsors-section h3 {
+
+.sponsors-title {
   color: white;
 }
 
 .sponsors-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(5, 1fr);
-  padding-left: min(2vw - 1.25rem), 3.75rem;
-  gap: 1.25rem;
+  place-items: center;
   grid-template-areas: "fat_lizard tallink" "dear_lucy point_scene" "poppamies table_online" "kuivalihakundi isku" "superpark .";
 }
 
@@ -431,14 +441,7 @@ aside .win-loss-container::after {
 }
 
 .sponsor-icon {
-  width: 100%;
-  height: -webkit-max-content;
-  height: -moz-max-content;
-  height: max-content;
-}
-
-.sponsors-title {
-  margin-bottom: 0.9375rem;
+  width: 80%;
 }
 
 header {
@@ -511,12 +514,16 @@ main .hero-section p:last-child {
   margin-bottom: 0;
 }
 
+.sponsors-section {
+  padding: 0 1.563rem;
+}
+
 @media (min-width: 720px) {
   .homepage-grid {
     grid-template-columns: 1fr 20.9375rem;
     max-width: 56.25rem;
     margin: 0 auto;
-    grid-template-areas: "header aside" "main	aside" "about	." "contact	." "sponsors sponsors" "footer footer";
+    grid-template-areas: "header aside" "main	aside" "about	sponsors" "contact	sponsors" "footer footer";
   }
 }
 /*# sourceMappingURL=styles.css.map */

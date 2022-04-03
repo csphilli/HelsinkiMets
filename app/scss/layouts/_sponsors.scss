@@ -2,17 +2,17 @@
 
 .sponsors-section {
     @include flexbox(column);
-    & h3 {
-        color: white;
-    }
+    gap: rem(20);
+}
+
+.sponsors-title {
+    color: white;
 }
 
 .sponsors-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(5, 1fr);
-    padding-left: min(calc(4vw / 2) - rem(20)), rem(60);
-    gap: rem(20);
+    place-items: center;
     grid-template-areas:
         "fat_lizard tallink"
         "dear_lucy point_scene"
@@ -58,42 +58,15 @@
 }
 
 .sponsor-icon {
-    width: 100%;
-    height: max-content;
+    width: 80%;
 }
-
-.sponsors-title {
-    margin-bottom: rem(15);
-}
-
-// @include xs {
-//     .sponsors-grid {
-//         grid-template-columns: repeat(2, 1fr);
-//         padding-left: min(calc(1vw / 2), rem(40));
-//     }
-//     .sponsor-icon {
-//         width: 100%;
-//         height: 100%;
-//         border: 2px solid red;
-//     }
-// }
 
 // @include md {
 //     .sponsors-grid {
-//         padding-left: min(calc(13vw / 2), rem(60));
-//     }
-//     .sponsor-icon {
-//         width: 75%;
-//         border: 2px solid yellow;
-//     }
-// }
-
-// @include lg {
-//     .sponsors-grid {
-//         padding-left: min(calc(13vw / 2), rem(60));
-//     }
-//     .sponsor-icon {
-//         width: 75%;
-//         border: 2px solid yellow;
+//         grid-template-columns: repeat(3, 1fr);
+//         grid-template-areas:
+//             "fat_lizard tallink dear_lucy"
+//             "point_scene poppamies table_online"
+//             "kuivalihakundi isku superpark";
 //     }
 // }

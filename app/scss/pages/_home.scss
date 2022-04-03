@@ -73,6 +73,10 @@ main {
     }
 }
 
+.sponsors-section {
+    padding: 0 $fs4;
+}
+
 // Media Queries
 
 @include md {
@@ -83,9 +87,8 @@ main {
         grid-template-areas:
             "header aside"
             "main	aside"
-            "about	."
-            "contact	."
-            "sponsors sponsors"
+            "about	sponsors"
+            "contact	sponsors"
             "footer footer";
     }
 }
