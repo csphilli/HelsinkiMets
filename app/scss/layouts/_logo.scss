@@ -35,13 +35,13 @@
     transform-box: fill-box;
 }
 
-#eye {
-    animation: eye-blink 7s infinite;
-}
+// #eye {
+//     animation: eye-blink 7s infinite;
+// }
 
-#ball {
-    animation: ball-roll 7s infinite linear;
-}
+// #ball {
+//     animation: ball-roll 7s infinite linear;
+// }
 
 @keyframes ball-roll {
     from {

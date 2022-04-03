@@ -3,19 +3,28 @@
 header {
     grid-area: header;
 }
+
 main {
     grid-area: main;
 }
+
 aside {
     margin-top: rem(40);
     grid-area: aside;
 }
+
 .about-section {
     grid-area: about;
 }
+
 .contact-section {
     grid-area: contact;
 }
+
+.sponsors-section {
+    grid-area: sponsors;
+}
+
 footer {
     grid-area: footer;
 }
@@ -31,13 +40,13 @@ footer {
         "aside"
         "about"
         "contact"
+        "sponsors"
         "footer";
 }
 
 main {
     .hero-section {
         padding: $fs1 $fs6;
-        // .hero-text-container {
         h2 {
             margin-bottom: $fs6;
         }
@@ -48,12 +57,12 @@ main {
                 margin-bottom: 0;
             }
         }
-        // }
     }
 }
 
 .about-section,
-.contact-section {
+.contact-section,
+.sponsors-section {
     padding: $fs4 $fs6;
     & h3,
     & p {
@@ -76,6 +85,7 @@ main {
             "main	aside"
             "about	."
             "contact	."
+            "sponsors sponsors"
             "footer footer";
     }
 }

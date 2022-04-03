@@ -265,16 +265,6 @@ nav {
   transform-box: fill-box;
 }
 
-#eye {
-  -webkit-animation: eye-blink 7s infinite;
-          animation: eye-blink 7s infinite;
-}
-
-#ball {
-  -webkit-animation: ball-roll 7s infinite linear;
-          animation: ball-roll 7s infinite linear;
-}
-
 @-webkit-keyframes ball-roll {
   from {
     transform: rotate(0deg);
@@ -385,6 +375,72 @@ aside .win-loss-container::after {
   padding-left: 0.512rem;
 }
 
+.sponsors-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+.sponsors-section h3 {
+  color: white;
+}
+
+.sponsors-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(5, 1fr);
+  padding-left: min(2vw - 1.25rem), 3.75rem;
+  gap: 1.25rem;
+  grid-template-areas: "fat_lizard tallink" "dear_lucy point_scene" "poppamies table_online" "kuivalihakundi isku" "superpark .";
+}
+
+.kuivalihakundi {
+  grid-area: kuivalihakundi;
+}
+
+.tallink {
+  grid-area: tallink;
+}
+
+.dear_lucy {
+  grid-area: dear_lucy;
+}
+
+.point_scene {
+  grid-area: point_scene;
+}
+
+.poppamies {
+  grid-area: poppamies;
+}
+
+.table_online {
+  grid-area: table_online;
+}
+
+.isku {
+  grid-area: isku;
+}
+
+.superpark {
+  grid-area: superpark;
+}
+
+.fat_lizard {
+  grid-area: fat_lizard;
+}
+
+.sponsor-icon {
+  width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+
+.sponsors-title {
+  margin-bottom: 0.9375rem;
+}
+
 header {
   grid-area: header;
 }
@@ -406,6 +462,10 @@ aside {
   grid-area: contact;
 }
 
+.sponsors-section {
+  grid-area: sponsors;
+}
+
 footer {
   grid-area: footer;
 }
@@ -415,7 +475,7 @@ footer {
   grid-template-columns: 1fr;
   gap: 1.25rem;
   margin: 0 auto;
-  grid-template-areas: "header" "main" "aside" "about" "contact" "footer";
+  grid-template-areas: "header" "main" "aside" "about" "contact" "sponsors" "footer";
 }
 
 main .hero-section {
@@ -432,17 +492,22 @@ main .hero-section p:last-child {
 }
 
 .about-section,
-.contact-section {
+.contact-section,
+.sponsors-section {
   padding: 1.563rem 1rem;
 }
 .about-section h3, .about-section p,
 .contact-section h3,
-.contact-section p {
+.contact-section p,
+.sponsors-section h3,
+.sponsors-section p {
   margin-bottom: 1rem;
 }
 .about-section h3:last-child, .about-section p:last-child,
 .contact-section h3:last-child,
-.contact-section p:last-child {
+.contact-section p:last-child,
+.sponsors-section h3:last-child,
+.sponsors-section p:last-child {
   margin-bottom: 0;
 }
 
@@ -451,7 +516,7 @@ main .hero-section p:last-child {
     grid-template-columns: 1fr 20.9375rem;
     max-width: 56.25rem;
     margin: 0 auto;
-    grid-template-areas: "header aside" "main	aside" "about	." "contact	." "footer footer";
+    grid-template-areas: "header aside" "main	aside" "about	." "contact	." "sponsors sponsors" "footer footer";
   }
 }
 /*# sourceMappingURL=styles.css.map */
