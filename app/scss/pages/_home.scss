@@ -36,47 +36,30 @@ footer {
 
 main {
     .hero-section {
-        position: relative;
         padding: $fs1 $fs6;
+        // .hero-text-container {
+        h2 {
+            margin-bottom: $fs6;
+        }
 
-        .hero-content {
-            .hero-text-container {
-                & h2 {
-                    margin-bottom: $fs6;
-                }
-
-                & p {
-                    margin-bottom: $fs9;
-                }
-
-                & p:last-child {
-                    margin-bottom: 0;
-                }
+        p {
+            margin-bottom: $fs9;
+            &:last-child {
+                margin-bottom: 0;
             }
         }
+        // }
     }
 }
 
-.about-section {
-    padding: $fs1 $fs6 $fs4 $fs6;
-    position: relative;
-
-    h3 {
-        margin-bottom: rem(16);
-    }
-    p {
-        margin-bottom: rem(10);
-    }
-}
-
+.about-section,
 .contact-section {
     padding: $fs4 $fs6;
-    position: relative;
-
-    .contact-text {
-        h3,
-        p {
-            margin-bottom: $fs6;
+    & h3,
+    & p {
+        margin-bottom: $fs6;
+        &:last-child {
+            margin-bottom: 0;
         }
     }
 }

@@ -245,7 +245,8 @@ nav {
   margin-bottom: 3.052rem;
   width: 100%;
 }
-.hero-images-collage > * {
+.hero-images-collage .hero-img-1,
+.hero-images-collage .hero-img-2 {
   width: 100%;
   height: 100%;
   filter: drop-shadow(1px 1px 10px rgba(0, 0, 0, 0.3));
@@ -418,37 +419,31 @@ footer {
 }
 
 main .hero-section {
-  position: relative;
   padding: 3.052rem 1rem;
 }
-main .hero-section .hero-content .hero-text-container h2 {
+main .hero-section h2 {
   margin-bottom: 1rem;
 }
-main .hero-section .hero-content .hero-text-container p {
+main .hero-section p {
   margin-bottom: 0.512rem;
 }
-main .hero-section .hero-content .hero-text-container p:last-child {
+main .hero-section p:last-child {
   margin-bottom: 0;
 }
 
-.about-section {
-  padding: 3.052rem 1rem 1.563rem 1rem;
-  position: relative;
-}
-.about-section h3 {
-  margin-bottom: 1rem;
-}
-.about-section p {
-  margin-bottom: 0.625rem;
-}
-
+.about-section,
 .contact-section {
   padding: 1.563rem 1rem;
-  position: relative;
 }
-.contact-section .contact-text h3,
-.contact-section .contact-text p {
+.about-section h3, .about-section p,
+.contact-section h3,
+.contact-section p {
   margin-bottom: 1rem;
+}
+.about-section h3:last-child, .about-section p:last-child,
+.contact-section h3:last-child,
+.contact-section p:last-child {
+  margin-bottom: 0;
 }
 
 @media (min-width: 720px) {

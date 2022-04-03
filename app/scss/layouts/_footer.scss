@@ -1,7 +1,5 @@
 @use "../abstracts" as *;
 
-// .footer-grid-container {
-
 .internal-links {
     grid-area: internal;
 }
@@ -39,6 +37,7 @@ footer {
     @include flexbox(row);
     gap: rem(10);
 }
+
 // Media Queries
 
 @include sm {
