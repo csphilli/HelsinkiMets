@@ -74,10 +74,16 @@ main {
 }
 
 .sponsors-section {
-    padding: 0 $fs4;
+    padding: 0 $fs6;
 }
 
 // Media Queries
+
+@include sm {
+    .homepage-grid {
+        max-width: rem(450);
+    }
+}
 
 @include md {
     .homepage-grid {

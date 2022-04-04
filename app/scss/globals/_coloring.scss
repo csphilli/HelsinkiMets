@@ -8,6 +8,32 @@ body {
 .about-section,
 .contact-section {
     background-color: $bg-color-light;
+    & p {
+        color: $bg-color-dark-shade1;
+    }
+}
+
+.schedule-text-content {
+    & h3 {
+        color: $title-text-white;
+    }
+    & p {
+        color: $bg-color-light-tint;
+    }
+}
+
+.win-loss-container {
+    font-weight: bold;
+    color: $title-text-white;
+}
+
+.sponsors-text {
+    & h3 {
+        color: $title-text-white;
+    }
+    & p {
+        color: $bg-color-light-tint;
+    }
 }
 
 header,

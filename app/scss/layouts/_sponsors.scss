@@ -5,20 +5,11 @@
     gap: rem(20);
 }
 
-.sponsors-title {
-    color: white;
-}
-
-// .svg-overlay {
-//     fill: white;
-// }
-
 .sponsors-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    // grid-template-rows: repeat(5, rem(75));
     place-items: center;
-    // gap: rem(20);
+    gap: 1em;
     grid-template-areas:
         "fat_lizard tallink"
         "dear_lucy point_scene"
