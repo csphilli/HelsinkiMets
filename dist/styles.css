@@ -421,7 +421,7 @@ aside .win-loss-container::after {
   display: grid;
   grid-template-columns: 1fr 1fr;
   place-items: center;
-  gap: 1em;
+  gap: 0.9375rem;
   grid-template-areas: "fat_lizard tallink" "dear_lucy point_scene" "poppamies table_online" "kuivalihakundi isku" "superpark .";
 }
 

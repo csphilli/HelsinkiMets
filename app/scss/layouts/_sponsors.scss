@@ -9,7 +9,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     place-items: center;
-    gap: 1em;
+    gap: rem(15);
     grid-template-areas:
         "fat_lizard tallink"
         "dear_lucy point_scene"
