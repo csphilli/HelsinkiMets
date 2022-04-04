@@ -404,6 +404,10 @@ aside .win-loss-container::after {
   grid-template-areas: "fat_lizard tallink" "dear_lucy point_scene" "poppamies table_online" "kuivalihakundi isku" "superpark .";
 }
 
+.sponsor-icon {
+  max-width: 70%;
+}
+
 .kuivalihakundi {
   grid-area: kuivalihakundi;
 }
@@ -438,10 +442,6 @@ aside .win-loss-container::after {
 
 .fat_lizard {
   grid-area: fat_lizard;
-}
-
-.sponsor-icon {
-  width: 80%;
 }
 
 header {

@@ -9,16 +9,26 @@
     color: white;
 }
 
+// .svg-overlay {
+//     fill: white;
+// }
+
 .sponsors-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    // grid-template-rows: repeat(5, rem(75));
     place-items: center;
+    // gap: rem(20);
     grid-template-areas:
         "fat_lizard tallink"
         "dear_lucy point_scene"
         "poppamies table_online"
         "kuivalihakundi isku"
         "superpark .";
+}
+
+.sponsor-icon {
+    max-width: 70%;
 }
 
 .kuivalihakundi {
@@ -55,10 +65,6 @@
 
 .fat_lizard {
     grid-area: fat_lizard;
-}
-
-.sponsor-icon {
-    width: 80%;
 }
 
 // @include md {
