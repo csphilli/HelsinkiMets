@@ -1,14 +1,12 @@
 @use "../abstracts" as *;
 
 .mets-title {
-    margin: rem(20) 0;
-    max-height: rem(75);
+    max-width: 100%;
 }
 
 .nav-container {
     width: 100%;
     @include flexbox(column, center, center);
-    padding: rem(16) rem(0);
 }
 
 nav {

@@ -1,26 +1,27 @@
 @use "../abstracts" as *;
 
-footer {
-    display: grid;
-    grid-template-columns: repeat(2, rem(125));
-    grid-template-rows: 1fr;
-    padding: 0 2.5em;
-    gap: 2em;
-    grid-template-areas:
-        "internal	external"
-        "social 	author";
-}
-
-.grid-title {
-    margin-bottom: 0.5em;
-}
-
-ul {
+.footer-links {
     padding: 0;
     margin: 0;
 }
 
+footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1em;
+    grid-template-areas:
+        "internal"
+        "external"
+        "social"
+        "author";
+}
+
+.grid-title {
+    margin-bottom: rem(5);
+}
+
 .social-links-container {
+    padding-top: rem(2);
     @include flexbox(row);
     gap: rem(10);
 }
@@ -29,10 +30,16 @@ ul {
 
 @include sm {
     footer {
-        grid-template-columns: repeat(3, 1fr);
+        padding-top: rem(20);
+        padding-left: rem(10);
+        padding-right: rem(10);
+        grid-template-columns: 1fr 1fr;
         grid-template-areas:
-            "internal external social"
-            ".	author	.";
+            "internal external"
+            "social author";
+    }
+    .footer-links {
+        padding-left: rem(20);
     }
 }
 

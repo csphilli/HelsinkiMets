@@ -57,7 +57,8 @@ footer {
 }
 
 .link:hover,
-.link:active {
+.link:active,
+.link:focus {
     color: $team-color-orange-hover;
     cursor: pointer;
 }

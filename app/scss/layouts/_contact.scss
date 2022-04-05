@@ -1,0 +1,26 @@
+@use "../abstracts/" as *;
+
+.contact-section {
+    & h3,
+    & p {
+        // border: 1px solid orangered;
+        margin-bottom: $fs6;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+// Media Queries
+
+@include sm {
+    .contact-section {
+        padding: rem(15) rem(10);
+    }
+}
+
+@include md {
+    .contact-section {
+        padding: rem(30) rem(20);
+    }
+}

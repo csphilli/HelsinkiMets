@@ -1,0 +1,89 @@
+@use "../abstracts" as *;
+
+main {
+    .hero-section {
+        h2 {
+            margin-bottom: $fs6;
+        }
+
+        p {
+            margin-bottom: $fs9;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.hero-images-collage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: $fs1;
+
+    .hero-img-1 {
+        width: 100%;
+        z-index: 0;
+    }
+}
+
+// Animating baseball finland logo eye blink
+
+#eye,
+#ball {
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+#eye {
+    animation: eye-blink 7s infinite;
+}
+
+#ball {
+    animation: ball-roll 7s infinite linear;
+}
+
+@keyframes ball-roll {
+    from {
+        transform: rotate(360deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes eye-blink {
+    90% {
+        transform: none;
+        animation-timing-function: ease-in;
+    }
+    93% {
+        transform: scaleY(0);
+    }
+    100% {
+        animation-timing-function: ease-out;
+    }
+}
+
+@include sm {
+    .hero-section {
+        padding: rem(15) rem(10);
+    }
+    .hero-images-collage {
+        flex-direction: row;
+    }
+    .hero-img-1 {
+        transform: translate(10%, 0);
+        z-index: 0;
+    }
+
+    .hero-img-2 {
+        transform: translate(-10%, 15%);
+    }
+}
+
+@include md {
+    .hero-section {
+        padding: rem(30) rem(20);
+    }
+}

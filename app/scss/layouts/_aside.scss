@@ -1,13 +1,13 @@
 @use "../abstracts" as *;
 
-// h2 font-family Oswald isn't lining up in the center. Having to give special padding to the bottom of this section to compensate.
 aside {
+    margin-top: rem(40);
     background-color: $bg-color-dark;
-    padding: 0 $fs6;
 
     .win-loss-container {
+        // border: 1px solid green;
         position: relative;
-        @include flexbox(row, center, center);
+        @include flexbox(column, center, center);
         margin-bottom: rem(35);
 
         &::before {
@@ -19,7 +19,6 @@ aside {
             background-color: $team-color-orange;
             width: rem(100);
             height: rem(50);
-            transform: rotate(-10deg) skew(-5deg) translate(-130%, -185%);
         }
 
         &::after {
@@ -36,7 +35,80 @@ aside {
             font-weight: bold;
             width: rem(100);
             height: rem(50);
-            transform: rotate(-5deg) translate(-115%, -170%);
         }
+    }
+
+    .schedule-section {
+        & h3,
+        & p {
+            margin-bottom: $fs6;
+        }
+    }
+
+    .schedule-grid {
+        display: flex;
+        flex-direction: column;
+        border-radius: $fs9;
+        overflow: hidden;
+        max-width: rem(420);
+        margin: 0 auto;
+        p {
+            margin: 0;
+        }
+
+        .grid-col {
+            display: grid;
+            grid-template-columns: 1fr;
+            min-height: $fs3;
+            align-items: center;
+        }
+    }
+}
+
+@include xs {
+    .win-loss-container {
+        &::before {
+            transform: rotate(-10deg) skew(-5deg) translate(-40%, -205%);
+        }
+
+        &::after {
+            transform: rotate(-5deg) translate(-25%, -200%);
+        }
+    }
+}
+
+@include variable(rem(150)) {
+    aside .schedule-grid .grid-col {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@include sm {
+    aside {
+        padding: rem(15) rem(10);
+    }
+    .win-loss-container {
+        &::before {
+            transform: rotate(-10deg) skew(-5deg) translate(-140%, -205%);
+        }
+
+        &::after {
+            transform: rotate(-5deg) translate(-125%, -190%);
+        }
+    }
+
+    aside {
+        & .schedule-grid .grid-col {
+            grid-template-columns: rem(48) rem(56) 1fr rem(64);
+            & .g-item {
+                padding-left: $fs9;
+            }
+        }
+    }
+}
+
+@include md {
+    aside {
+        padding: rem(30) rem(20);
     }
 }

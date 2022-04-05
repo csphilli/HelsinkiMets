@@ -1,84 +1,3 @@
-/* Box sizing rules */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-/* Remove default margin */
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-figure,
-blockquote,
-dl,
-dd {
-  margin: 0;
-}
-
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role=list],
-ol[role=list] {
-  list-style: none;
-}
-
-/* Set core root defaults */
-html:focus-within {
-  scroll-behavior: smooth;
-}
-
-/* Set core body defaults */
-body {
-  min-height: 100vh;
-  text-rendering: optimizeSpeed;
-  line-height: 1.5;
-}
-
-/* A elements that don't have a class get default styles */
-a:not([class]) {
-  -webkit-text-decoration-skip: ink;
-          text-decoration-skip-ink: auto;
-}
-
-a {
-  text-decoration: none;
-}
-
-/* Make images easier to work with */
-img,
-picture {
-  max-width: 100%;
-  display: block;
-}
-
-/* Inherit fonts for inputs and buttons */
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
-
-/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
-@media (prefers-reduced-motion: reduce) {
-  html:focus-within {
-    scroll-behavior: auto;
-  }
-
-  *,
-*::before,
-*::after {
-    -webkit-animation-duration: 0.01ms !important;
-            animation-duration: 0.01ms !important;
-    -webkit-animation-iteration-count: 1 !important;
-            animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
 @font-face {
   font-family: "astrudregular";
   src: url("/app/fonts/astrud-webfont.woff2") format("woff2"), url("/app/fonts/astrud-webfont.woff") format("woff");
@@ -139,7 +58,8 @@ footer {
 }
 
 .link:hover,
-.link:active {
+.link:active,
+.link:focus {
   color: #eb9a6b;
   cursor: pointer;
 }
@@ -273,25 +193,24 @@ aside {
   grid-area: sponsors;
 }
 
-footer {
-  display: grid;
-  grid-template-columns: repeat(2, 7.8125rem);
-  grid-template-rows: 1fr;
-  padding: 0 2.5em;
-  gap: 2em;
-  grid-template-areas: "internal	external" "social 	author";
-}
-
-.grid-title {
-  margin-bottom: 0.5em;
-}
-
-ul {
+.footer-links {
   padding: 0;
   margin: 0;
 }
 
+footer {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1em;
+  grid-template-areas: "internal" "external" "social" "author";
+}
+
+.grid-title {
+  margin-bottom: 0.3125rem;
+}
+
 .social-links-container {
+  padding-top: 0.125rem;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -299,10 +218,17 @@ ul {
   gap: 0.625rem;
 }
 
-@media (min-width: 480px) {
+@media (min-width: 320px) {
   footer {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-areas: "internal external social" ".	author	.";
+    padding-top: 1.25rem;
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "internal external" "social author";
+  }
+
+  .footer-links {
+    padding-left: 1.25rem;
   }
 }
 @media (min-width: 720px) {
@@ -312,8 +238,7 @@ ul {
   }
 }
 .mets-title {
-  margin: 1.25rem 0;
-  max-height: 4.6875rem;
+  max-width: 100%;
 }
 
 .nav-container {
@@ -322,7 +247,6 @@ ul {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 1rem 0rem;
 }
 
 nav {
@@ -333,24 +257,25 @@ nav {
   gap: 1rem;
 }
 
+main .hero-section h2 {
+  margin-bottom: 1rem;
+}
+main .hero-section p {
+  margin-bottom: 0.512rem;
+}
+main .hero-section p:last-child {
+  margin-bottom: 0;
+}
+
 .hero-images-collage {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   margin-bottom: 3.052rem;
-  width: 100%;
-}
-.hero-images-collage .hero-img-1,
-.hero-images-collage .hero-img-2 {
-  width: 100%;
-  height: 100%;
-  filter: drop-shadow(1px 1px 10px rgba(0, 0, 0, 0.3));
 }
 .hero-images-collage .hero-img-1 {
-  transform: translate(10%, 0);
+  width: 100%;
   z-index: 0;
-}
-.hero-images-collage .hero-img-2 {
-  transform: translate(-10%, 15%);
 }
 
 #eye,
@@ -371,19 +296,19 @@ nav {
 
 @-webkit-keyframes ball-roll {
   from {
-    transform: rotate(0deg);
+    transform: rotate(360deg);
   }
   to {
-    transform: rotate(360deg);
+    transform: rotate(0deg);
   }
 }
 
 @keyframes ball-roll {
   from {
-    transform: rotate(0deg);
+    transform: rotate(360deg);
   }
   to {
-    transform: rotate(360deg);
+    transform: rotate(0deg);
   }
 }
 @-webkit-keyframes eye-blink {
@@ -414,14 +339,37 @@ nav {
             animation-timing-function: ease-out;
   }
 }
+@media (min-width: 320px) {
+  .hero-section {
+    padding: 0.9375rem 0.625rem;
+  }
+
+  .hero-images-collage {
+    flex-direction: row;
+  }
+
+  .hero-img-1 {
+    transform: translate(10%, 0);
+    z-index: 0;
+  }
+
+  .hero-img-2 {
+    transform: translate(-10%, 15%);
+  }
+}
+@media (min-width: 720px) {
+  .hero-section {
+    padding: 1.875rem 1.25rem;
+  }
+}
 aside {
+  margin-top: 2.5rem;
   background-color: #242424;
-  padding: 0 1rem;
 }
 aside .win-loss-container {
   position: relative;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-bottom: 2.1875rem;
@@ -435,7 +383,6 @@ aside .win-loss-container::before {
   background-color: #fb650e;
   width: 6.25rem;
   height: 3.125rem;
-  transform: rotate(-10deg) skew(-5deg) translate(-130%, -185%);
 }
 aside .win-loss-container::after {
   content: "2022";
@@ -451,14 +398,11 @@ aside .win-loss-container::after {
   font-weight: bold;
   width: 6.25rem;
   height: 3.125rem;
-  transform: rotate(-5deg) translate(-115%, -170%);
 }
-
-.schedule-section h3, .schedule-section p {
+aside .schedule-section h3, aside .schedule-section p {
   margin-bottom: 1rem;
 }
-
-.schedule-grid {
+aside .schedule-grid {
   display: flex;
   flex-direction: column;
   border-radius: 0.512rem;
@@ -466,40 +410,132 @@ aside .win-loss-container::after {
   max-width: 26.25rem;
   margin: 0 auto;
 }
-.schedule-grid p {
+aside .schedule-grid p {
   margin: 0;
 }
-.schedule-grid .grid-col {
+aside .schedule-grid .grid-col {
   display: grid;
-  grid-template-columns: 3rem 3.5rem 1fr 4rem;
+  grid-template-columns: 1fr;
   min-height: 1.953rem;
   align-items: center;
 }
-.schedule-grid .g-item {
-  padding-left: 0.512rem;
-}
 
+@media (min-width: 0) {
+  .win-loss-container::before {
+    transform: rotate(-10deg) skew(-5deg) translate(-40%, -205%);
+  }
+  .win-loss-container::after {
+    transform: rotate(-5deg) translate(-25%, -200%);
+  }
+}
+@media (min-width: 9.375rem) {
+  aside .schedule-grid .grid-col {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (min-width: 320px) {
+  aside {
+    padding: 0.9375rem 0.625rem;
+  }
+
+  .win-loss-container::before {
+    transform: rotate(-10deg) skew(-5deg) translate(-140%, -205%);
+  }
+  .win-loss-container::after {
+    transform: rotate(-5deg) translate(-125%, -190%);
+  }
+
+  aside .schedule-grid .grid-col {
+    grid-template-columns: 3rem 3.5rem 1fr 4rem;
+  }
+  aside .schedule-grid .grid-col .g-item {
+    padding-left: 0.512rem;
+  }
+}
+@media (min-width: 720px) {
+  aside {
+    padding: 1.875rem 1.25rem;
+  }
+}
 .sponsors-section {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: stretch;
-  gap: 1.25rem;
 }
 
 .sponsors-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   place-items: center;
   gap: 0.9375rem;
-  grid-template-areas: "fat_lizard tallink" "dear_lucy point_scene" "poppamies table_online" "kuivalihakundi isku" "superpark .";
+  grid-template-areas: "fat_lizard" "tallink" "dear_lucy" "point_scene" "poppamies" "table_online" "kuivalihakundi" "isku" "superpark";
 }
 
-aside {
-  margin-top: 2.5rem;
+.sponsors-section h3, .sponsors-section p {
+  margin-bottom: 1rem;
+}
+.sponsors-section h3:last-child, .sponsors-section p:last-child {
+  margin-bottom: 0;
 }
 
+@media (min-width: 320px) {
+  .sponsors-text {
+    padding: 0.9375rem 0.625rem;
+  }
+
+  .sponsors-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "fat_lizard tallink" "dear_lucy point_scene" "poppamies table_online" "kuivalihakundi isku" "superpark .";
+  }
+}
+@media (min-width: 720px) {
+  .sponsors-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    grid-template-areas: "fat_lizard tallink dear_lucy" "point_scene poppamies table_online" "kuivalihakundi isku superpark";
+  }
+
+  .sponsors-text {
+    padding: 1.875rem 1.25rem;
+  }
+}
+.about-section h3, .about-section p {
+  margin-bottom: 1rem;
+}
+.about-section h3:last-child, .about-section p:last-child {
+  margin-bottom: 0;
+}
+
+@media (min-width: 320px) {
+  .about-section {
+    padding: 0.9375rem 0.625rem;
+  }
+}
+@media (min-width: 720px) {
+  .about-section {
+    padding: 1.875rem 1.25rem;
+  }
+}
+.contact-section h3, .contact-section p {
+  margin-bottom: 1rem;
+}
+.contact-section h3:last-child, .contact-section p:last-child {
+  margin-bottom: 0;
+}
+
+@media (min-width: 320px) {
+  .contact-section {
+    padding: 0.9375rem 0.625rem;
+  }
+}
+@media (min-width: 720px) {
+  .contact-section {
+    padding: 1.875rem 1.25rem;
+  }
+}
 .homepage-grid {
+  min-width: 8.4375rem;
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.25rem;
@@ -507,48 +543,6 @@ aside {
   grid-template-areas: "header" "main" "aside" "about" "contact" "sponsors" "footer";
 }
 
-main .hero-section {
-  padding: 3.052rem 1rem;
-}
-main .hero-section h2 {
-  margin-bottom: 1rem;
-}
-main .hero-section p {
-  margin-bottom: 0.512rem;
-}
-main .hero-section p:last-child {
-  margin-bottom: 0;
-}
-
-.about-section,
-.contact-section,
-.sponsors-section {
-  padding: 1.563rem 1rem;
-}
-.about-section h3, .about-section p,
-.contact-section h3,
-.contact-section p,
-.sponsors-section h3,
-.sponsors-section p {
-  margin-bottom: 1rem;
-}
-.about-section h3:last-child, .about-section p:last-child,
-.contact-section h3:last-child,
-.contact-section p:last-child,
-.sponsors-section h3:last-child,
-.sponsors-section p:last-child {
-  margin-bottom: 0;
-}
-
-.sponsors-section {
-  padding: 0 1rem;
-}
-
-@media (min-width: 480px) {
-  .homepage-grid {
-    max-width: 28.125rem;
-  }
-}
 @media (min-width: 720px) {
   .homepage-grid {
     grid-template-columns: 1fr 20.9375rem;
@@ -557,4 +551,4 @@ main .hero-section p:last-child {
     grid-template-areas: "header aside" "main	aside" "about	sponsors" "contact	sponsors" "footer footer";
   }
 }
-/*# sourceMappingURL=styles.css.map */
+/*# sourceMappingURL=homepage.css.map */

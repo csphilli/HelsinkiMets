@@ -2,27 +2,62 @@
 
 .sponsors-section {
     @include flexbox(column);
-    gap: rem(20);
 }
 
 .sponsors-grid {
+    // border: 1px solid cyan;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     place-items: center;
     gap: rem(15);
     grid-template-areas:
-        "fat_lizard tallink"
-        "dear_lucy point_scene"
-        "poppamies table_online"
-        "kuivalihakundi isku"
-        "superpark .";
+        "fat_lizard"
+        "tallink"
+        "dear_lucy"
+        "point_scene"
+        "poppamies"
+        "table_online"
+        "kuivalihakundi"
+        "isku"
+        "superpark";
 }
-// @include md {
-//     .sponsors-grid {
-//         grid-template-columns: repeat(3, 1fr);
-//         grid-template-areas:
-//             "fat_lizard tallink dear_lucy"
-//             "point_scene poppamies table_online"
-//             "kuivalihakundi isku superpark";
-//     }
-// }
+
+.sponsors-section {
+    & h3,
+    & p {
+        // border: 1px solid orangered;
+        margin-bottom: $fs6;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+@include sm {
+    .sponsors-text {
+        padding: rem(15) rem(10);
+    }
+    .sponsors-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "fat_lizard tallink"
+            "dear_lucy point_scene"
+            "poppamies table_online"
+            "kuivalihakundi isku"
+            "superpark .";
+    }
+}
+
+@include md {
+    .sponsors-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0;
+        grid-template-areas:
+            "fat_lizard tallink dear_lucy"
+            "point_scene poppamies table_online"
+            "kuivalihakundi isku superpark";
+    }
+    .sponsors-text {
+        padding: rem(30) rem(20);
+    }
+}
