@@ -1,32 +1,7 @@
 @use "../abstracts" as *;
 
-header {
-    grid-area: header;
-}
-
-main {
-    grid-area: main;
-}
-
 aside {
     margin-top: rem(40);
-    grid-area: aside;
-}
-
-.about-section {
-    grid-area: about;
-}
-
-.contact-section {
-    grid-area: contact;
-}
-
-.sponsors-section {
-    grid-area: sponsors;
-}
-
-footer {
-    grid-area: footer;
 }
 
 .homepage-grid {

@@ -8,7 +8,7 @@ aside {
     .win-loss-container {
         position: relative;
         @include flexbox(row, center, center);
-        margin-bottom: rem(55);
+        margin-bottom: rem(35);
 
         &::before {
             content: "";

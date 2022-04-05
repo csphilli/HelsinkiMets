@@ -189,6 +189,22 @@ p {
   font-size: 3.052rem;
 }
 
+header {
+  grid-area: header;
+}
+
+main {
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
+}
+
+aside {
+  grid-area: aside;
+}
+
 .internal-links {
   grid-area: internal;
 }
@@ -205,6 +221,58 @@ p {
   grid-area: author;
 }
 
+.sponsor-icon {
+  max-width: 70%;
+}
+
+.kuivalihakundi {
+  grid-area: kuivalihakundi;
+}
+
+.tallink {
+  grid-area: tallink;
+}
+
+.dear_lucy {
+  grid-area: dear_lucy;
+}
+
+.point_scene {
+  grid-area: point_scene;
+}
+
+.poppamies {
+  grid-area: poppamies;
+}
+
+.table_online {
+  grid-area: table_online;
+}
+
+.isku {
+  grid-area: isku;
+}
+
+.superpark {
+  grid-area: superpark;
+}
+
+.fat_lizard {
+  grid-area: fat_lizard;
+}
+
+.about-section {
+  grid-area: about;
+}
+
+.contact-section {
+  grid-area: contact;
+}
+
+.sponsors-section {
+  grid-area: sponsors;
+}
+
 footer {
   display: grid;
   grid-template-columns: repeat(2, 7.8125rem);
@@ -213,10 +281,12 @@ footer {
   gap: 2em;
   grid-template-areas: "internal	external" "social 	author";
 }
-footer .grid-title {
+
+.grid-title {
   margin-bottom: 0.5em;
 }
-footer ul {
+
+ul {
   padding: 0;
   margin: 0;
 }
@@ -241,6 +311,11 @@ footer ul {
     grid-template-areas: "internal external social author";
   }
 }
+.mets-title {
+  margin: 1.25rem 0;
+  max-height: 4.6875rem;
+}
+
 .nav-container {
   width: 100%;
   display: flex;
@@ -256,11 +331,6 @@ nav {
   justify-content: center;
   align-items: space-between;
   gap: 1rem;
-}
-
-.mets-title {
-  margin: 1.25rem 0;
-  height: 4.6875rem;
 }
 
 .hero-images-collage {
@@ -354,7 +424,7 @@ aside .win-loss-container {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-bottom: 3.4375rem;
+  margin-bottom: 2.1875rem;
 }
 aside .win-loss-container::before {
   content: "";
@@ -425,73 +495,8 @@ aside .win-loss-container::after {
   grid-template-areas: "fat_lizard tallink" "dear_lucy point_scene" "poppamies table_online" "kuivalihakundi isku" "superpark .";
 }
 
-.sponsor-icon {
-  max-width: 70%;
-}
-
-.kuivalihakundi {
-  grid-area: kuivalihakundi;
-}
-
-.tallink {
-  grid-area: tallink;
-}
-
-.dear_lucy {
-  grid-area: dear_lucy;
-}
-
-.point_scene {
-  grid-area: point_scene;
-}
-
-.poppamies {
-  grid-area: poppamies;
-}
-
-.table_online {
-  grid-area: table_online;
-}
-
-.isku {
-  grid-area: isku;
-}
-
-.superpark {
-  grid-area: superpark;
-}
-
-.fat_lizard {
-  grid-area: fat_lizard;
-}
-
-header {
-  grid-area: header;
-}
-
-main {
-  grid-area: main;
-}
-
 aside {
   margin-top: 2.5rem;
-  grid-area: aside;
-}
-
-.about-section {
-  grid-area: about;
-}
-
-.contact-section {
-  grid-area: contact;
-}
-
-.sponsors-section {
-  grid-area: sponsors;
-}
-
-footer {
-  grid-area: footer;
 }
 
 .homepage-grid {

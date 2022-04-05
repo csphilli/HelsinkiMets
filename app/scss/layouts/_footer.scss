@@ -1,18 +1,5 @@
 @use "../abstracts" as *;
 
-.internal-links {
-    grid-area: internal;
-}
-.external-links {
-    grid-area: external;
-}
-.social-links {
-    grid-area: social;
-}
-.author-link {
-    grid-area: author;
-}
-
 footer {
     display: grid;
     grid-template-columns: repeat(2, rem(125));
@@ -22,15 +9,15 @@ footer {
     grid-template-areas:
         "internal	external"
         "social 	author";
+}
 
-    .grid-title {
-        margin-bottom: 0.5em;
-    }
+.grid-title {
+    margin-bottom: 0.5em;
+}
 
-    ul {
-        padding: 0;
-        margin: 0;
-    }
+ul {
+    padding: 0;
+    margin: 0;
 }
 
 .social-links-container {

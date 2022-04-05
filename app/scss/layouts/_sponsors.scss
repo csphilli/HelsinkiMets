@@ -17,47 +17,6 @@
         "kuivalihakundi isku"
         "superpark .";
 }
-
-.sponsor-icon {
-    max-width: 70%;
-}
-
-.kuivalihakundi {
-    grid-area: kuivalihakundi;
-}
-
-.tallink {
-    grid-area: tallink;
-}
-
-.dear_lucy {
-    grid-area: dear_lucy;
-}
-
-.point_scene {
-    grid-area: point_scene;
-}
-
-.poppamies {
-    grid-area: poppamies;
-}
-
-.table_online {
-    grid-area: table_online;
-}
-
-.isku {
-    grid-area: isku;
-}
-
-.superpark {
-    grid-area: superpark;
-}
-
-.fat_lizard {
-    grid-area: fat_lizard;
-}
-
 // @include md {
 //     .sponsors-grid {
 //         grid-template-columns: repeat(3, 1fr);

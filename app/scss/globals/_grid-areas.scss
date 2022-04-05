@@ -1,0 +1,88 @@
+// Site-wide
+
+header {
+    grid-area: header;
+}
+
+main {
+    grid-area: main;
+}
+
+footer {
+    grid-area: footer;
+}
+
+aside {
+    grid-area: aside;
+}
+
+// Footer
+
+.internal-links {
+    grid-area: internal;
+}
+.external-links {
+    grid-area: external;
+}
+.social-links {
+    grid-area: social;
+}
+.author-link {
+    grid-area: author;
+}
+
+// Sponsors
+
+.sponsor-icon {
+    max-width: 70%;
+}
+
+.kuivalihakundi {
+    grid-area: kuivalihakundi;
+}
+
+.tallink {
+    grid-area: tallink;
+}
+
+.dear_lucy {
+    grid-area: dear_lucy;
+}
+
+.point_scene {
+    grid-area: point_scene;
+}
+
+.poppamies {
+    grid-area: poppamies;
+}
+
+.table_online {
+    grid-area: table_online;
+}
+
+.isku {
+    grid-area: isku;
+}
+
+.superpark {
+    grid-area: superpark;
+}
+
+.fat_lizard {
+    grid-area: fat_lizard;
+}
+
+// Homepage
+
+.about-section {
+    grid-area: about;
+}
+
+.contact-section {
+    grid-area: contact;
+}
+
+.sponsors-section {
+    grid-area: sponsors;
+}
