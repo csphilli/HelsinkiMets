@@ -18,6 +18,13 @@ nav {
   gap: 1rem;
 }
 
+.field-locations-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  grid-template-areas: "header" "main" "aside" "footer";
+}
+
 .footer-links {
   padding: 0;
   margin: 0;
