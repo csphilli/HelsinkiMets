@@ -1,5 +1,13 @@
 @use "../abstracts" as *;
 
+@font-face {
+    font-family: "astrudregular";
+    src: url("/app/fonts/astrud-webfont.woff2") format("woff2"),
+        url("/app/fonts/astrud-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
 h1 {
     font-family: "astrudregular", sans-serif;
     font-size: rem(48);
