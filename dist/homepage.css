@@ -25,9 +25,7 @@ footer {
 
 @media (min-width: 320px) {
   footer {
-    padding-top: 1.25rem;
-    padding-left: 0.625rem;
-    padding-right: 0.625rem;
+    padding: 1.25rem 0.625rem;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "internal external" "social author";
   }
@@ -60,16 +58,6 @@ nav {
   justify-content: center;
   align-items: space-between;
   gap: 1rem;
-}
-
-main .hero-section h2 {
-  margin-bottom: 1rem;
-}
-main .hero-section p {
-  margin-bottom: 0.512rem;
-}
-main .hero-section p:last-child {
-  margin-bottom: 0;
 }
 
 .hero-images-collage {
@@ -284,13 +272,6 @@ aside .schedule-grid .grid-col {
   grid-template-areas: "fat_lizard" "tallink" "dear_lucy" "point_scene" "poppamies" "table_online" "kuivalihakundi" "isku" "superpark";
 }
 
-.sponsors-section h3, .sponsors-section p {
-  margin-bottom: 1rem;
-}
-.sponsors-section h3:last-child, .sponsors-section p:last-child {
-  margin-bottom: 0;
-}
-
 @media (min-width: 320px) {
   .sponsors-text {
     padding: 0.9375rem 0.625rem;
@@ -312,13 +293,6 @@ aside .schedule-grid .grid-col {
     padding: 1.875rem 1.25rem;
   }
 }
-.about-section h3, .about-section p {
-  margin-bottom: 1rem;
-}
-.about-section h3:last-child, .about-section p:last-child {
-  margin-bottom: 0;
-}
-
 @media (min-width: 320px) {
   .about-section {
     padding: 0.9375rem 0.625rem;
@@ -329,13 +303,6 @@ aside .schedule-grid .grid-col {
     padding: 1.875rem 1.25rem;
   }
 }
-.contact-section h3, .contact-section p {
-  margin-bottom: 1rem;
-}
-.contact-section h3:last-child, .contact-section p:last-child {
-  margin-bottom: 0;
-}
-
 @media (min-width: 320px) {
   .contact-section {
     padding: 0.9375rem 0.625rem;

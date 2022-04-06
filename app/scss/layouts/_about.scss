@@ -1,16 +1,5 @@
 @use "../abstracts/" as *;
 
-.about-section {
-    & h3,
-    & p {
-        // border: 1px solid orangered;
-        margin-bottom: $fs6;
-        &:last-child {
-            margin-bottom: 0;
-        }
-    }
-}
-
 // Media Queries
 
 @include sm {

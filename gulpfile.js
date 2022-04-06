@@ -8,7 +8,12 @@ const babel = require("gulp-babel");
 const autoprefixer = require("autoprefixer");
 
 // If ever having to compile multiple files... Just create the main .scss/.js files at the root of app/scsss or app/js respectively and list them here in their respective const declarations (without extensions)
-const scss_files = ["reset-styles", "global-styles", "homepage"];
+const scss_files = [
+    "reset-styles",
+    "global-styles",
+    "homepage",
+    "field-locations",
+];
 
 const js_files = ["script"];
 

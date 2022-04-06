@@ -1,0 +1,12 @@
+@use "../abstracts/" as *;
+
+.field-locations-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: rem(20);
+    grid-template-areas:
+        "header"
+        "aside"
+        "main"
+        "footer";
+}

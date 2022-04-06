@@ -30,9 +30,7 @@ footer {
 
 @include sm {
     footer {
-        padding-top: rem(20);
-        padding-left: rem(10);
-        padding-right: rem(10);
+        padding: rem(20) rem(10);
         grid-template-columns: 1fr 1fr;
         grid-template-areas:
             "internal external"

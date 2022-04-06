@@ -1,20 +1,5 @@
 @use "../abstracts" as *;
 
-main {
-    .hero-section {
-        h2 {
-            margin-bottom: $fs6;
-        }
-
-        p {
-            margin-bottom: $fs9;
-            &:last-child {
-                margin-bottom: 0;
-            }
-        }
-    }
-}
-
 .hero-images-collage {
     display: flex;
     flex-direction: column;

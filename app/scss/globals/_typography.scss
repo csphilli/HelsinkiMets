@@ -17,10 +17,15 @@ h2,
 h3,
 h4 {
     font-family: "Oswald", sans-serif;
+    margin-bottom: $fs6;
 }
 
 p {
     font-family: "Montserat", sans-serif;
+    margin-bottom: $fs7;
+    &:last-child {
+        margin-bottom: 0;
+    }
 }
 
 .nav-link {
