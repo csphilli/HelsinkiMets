@@ -2,6 +2,10 @@
 
 // Media Queries
 
+.contact-text {
+    margin-bottom: rem(20);
+}
+
 @include sm {
     .contact-section {
         padding: rem(15) rem(10);

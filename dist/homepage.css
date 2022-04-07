@@ -303,6 +303,10 @@ aside .schedule-grid .grid-col {
     padding: 1.875rem 1.25rem;
   }
 }
+.contact-text {
+  margin-bottom: 1.25rem;
+}
+
 @media (min-width: 320px) {
   .contact-section {
     padding: 0.9375rem 0.625rem;
@@ -328,6 +332,97 @@ aside .schedule-grid .grid-col {
     max-width: 56.25rem;
     margin: 0 auto;
     grid-template-areas: "header aside" "main	aside" "about	sponsors" "contact	sponsors" "footer footer";
+  }
+}
+input,
+textarea {
+  -webkit-appearance: none;
+  border-radius: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.form-s1 {
+  -webkit-appearance: none;
+  max-width: 15.625rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  padding: 0.625rem;
+  font-family: inherit;
+}
+.form-s1 .form-input {
+  width: 100%;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.09375rem;
+  border: 0;
+  padding: 0.625rem;
+  outline: 0;
+}
+.form-s1 .form-input::-moz-placeholder {
+  color: #262626;
+  opacity: 0.5;
+}
+.form-s1 .form-input:-ms-input-placeholder {
+  color: #262626;
+  opacity: 0.5;
+}
+.form-s1 .form-input::placeholder {
+  color: #262626;
+  opacity: 0.5;
+}
+.form-s1 .form-input:focus::-moz-placeholder {
+  color: #242424;
+  opacity: 1;
+}
+.form-s1 .form-input:focus:-ms-input-placeholder {
+  color: #242424;
+  opacity: 1;
+}
+.form-s1 .form-input:focus::placeholder {
+  color: #242424;
+  opacity: 1;
+}
+.form-s1 .form-button {
+  width: 50%;
+  font-family: "Oswald", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1rem;
+  background-color: #fb650e;
+  border: none;
+  min-height: 2.5rem;
+  border-radius: 0.3125rem;
+  color: #fff;
+}
+.form-s1 .form-button:hover {
+  background-color: #eb9a6b;
+}
+.form-s1 .form-item {
+  margin-bottom: 0.125rem;
+}
+.form-s1 .form-item:last-child {
+  margin-bottom: 0;
+}
+.form-s1 .form-item textarea {
+  resize: none;
+}
+
+@media (min-width: 320px) {
+  .form-s1 {
+    max-width: 20rem;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 720px) {
+  .form-s1 {
+    max-width: 28.125rem;
+  }
+  .form-s1 .form-button {
+    max-width: 9.375rem;
   }
 }
 /*# sourceMappingURL=homepage.css.map */
