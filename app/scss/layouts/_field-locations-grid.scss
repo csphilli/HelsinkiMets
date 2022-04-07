@@ -3,10 +3,23 @@
 .field-locations-grid {
     display: grid;
     grid-template-columns: 1fr;
+    min-width: rem(135);
     gap: rem(20);
     grid-template-areas:
         "header"
         "main"
         "aside"
         "footer";
+}
+
+@include md {
+    .field-locations-grid {
+        grid-template-columns: 1fr rem(250);
+        max-width: rem(1100);
+        margin: 0 auto;
+        grid-template-areas:
+            "header aside"
+            "main aside"
+            "footer footer";
+    }
 }

@@ -1,0 +1,15 @@
+@use "../abstracts/" as *;
+
+@include sm {
+    .field-locs-aside {
+        padding: rem(15) rem(10);
+    }
+}
+
+@include md {
+    .field-locs-aside {
+        margin-top: rem(165);
+        // border: 1px solid pink;
+        padding: rem(30) rem(20);
+    }
+}

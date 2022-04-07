@@ -4,32 +4,31 @@ body {
 
 .hero-section,
 .about-section,
-.contact-section {
+.contact-section,
+.field-card {
   background-color: #d9d9d9;
 }
 .hero-section p,
 .about-section p,
-.contact-section p {
+.contact-section p,
+.field-card p {
   color: #262626;
 }
 
-.schedule-text-content h3 {
+.schedule-text-content h3,
+.sponsors-text h3,
+.field-locs-aside h3 {
   color: white;
 }
-.schedule-text-content p {
+.schedule-text-content p,
+.sponsors-text p,
+.field-locs-aside p {
   color: #d6d6d6;
 }
 
 .win-loss-container {
   font-weight: bold;
   color: white;
-}
-
-.sponsors-text h3 {
-  color: white;
-}
-.sponsors-text p {
-  color: #d6d6d6;
 }
 
 header,
@@ -52,8 +51,7 @@ footer {
 }
 
 .link:hover,
-.link:active,
-.link:focus {
+.link:active {
   color: #eb9a6b;
   cursor: pointer;
 }

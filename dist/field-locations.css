@@ -18,13 +18,93 @@ nav {
   gap: 1rem;
 }
 
+.field-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  margin-bottom: 1.25rem;
+}
+.field-card .field-card-text {
+  width: 100%;
+}
+.field-card .field-card-img {
+  margin: 0.625rem auto;
+  max-width: min(18.75rem, 70%);
+  max-height: min(18.75rem, 100%);
+}
+.field-card:last-child {
+  margin-bottom: 0;
+}
+
+.field-card-text h2 {
+  font-size: 1.563rem;
+}
+.field-card-text h3 {
+  margin-top: 1.875rem;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+}
+.field-card-text p {
+  margin-left: 0.625rem;
+}
+
+@media (min-width: 320px) {
+  .field-card {
+    padding: 0.9375rem 0.625rem;
+  }
+
+  .field-card-img {
+    max-width: 18.75rem;
+  }
+}
+@media (min-width: 720px) {
+  .field-card {
+    padding: 1.875rem 1.25rem;
+  }
+  .field-card .field-card-text {
+    padding: 0 0.625rem;
+  }
+  .field-card .field-card-img {
+    width: min(18.75rem, 80%);
+    height: min(18.75rem, 80%);
+  }
+}
+@media (min-width: 56.25rem) {
+  .field-card {
+    flex-direction: row;
+    flex-grow: 1;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+@media (min-width: 320px) {
+  .field-locs-aside {
+    padding: 0.9375rem 0.625rem;
+  }
+}
+@media (min-width: 720px) {
+  .field-locs-aside {
+    margin-top: 10.3125rem;
+    padding: 1.875rem 1.25rem;
+  }
+}
 .field-locations-grid {
   display: grid;
   grid-template-columns: 1fr;
+  min-width: 8.4375rem;
   gap: 1.25rem;
   grid-template-areas: "header" "main" "aside" "footer";
 }
 
+@media (min-width: 720px) {
+  .field-locations-grid {
+    grid-template-columns: 1fr 15.625rem;
+    max-width: 68.75rem;
+    margin: 0 auto;
+    grid-template-areas: "header aside" "main aside" "footer footer";
+  }
+}
 .footer-links {
   padding: 0;
   margin: 0;

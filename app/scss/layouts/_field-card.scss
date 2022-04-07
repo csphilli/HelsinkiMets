@@ -1,1 +1,67 @@
 @use "../abstracts/" as *;
+
+.field-card {
+    // border: 1px solid purple;
+    @include flexbox(column);
+    // gap: rem(20);
+    margin-bottom: rem(20);
+    .field-card-text {
+        width: 100%;
+    }
+    .field-card-img {
+        margin: rem(10) auto;
+        max-width: min(rem(300), 70%);
+        max-height: min(rem(300), 100%);
+        // height: auto;
+    }
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.field-card-text {
+    & h2 {
+        font-size: $fs4;
+    }
+    & h3 {
+        margin-top: rem(30);
+        font-size: $fs5;
+        text-transform: uppercase;
+    }
+    & p {
+        margin-left: rem(10);
+    }
+}
+
+@include sm {
+    .field-card {
+        padding: rem(15) rem(10);
+    }
+    .field-card-img {
+        max-width: rem(300);
+    }
+}
+
+@include md {
+    .field-card {
+        padding: rem(30) rem(20);
+
+        .field-card-text {
+            padding: 0 rem(10);
+        }
+
+        .field-card-img {
+            width: min(rem(300), 80%);
+            height: min(rem(300), 80%);
+        }
+    }
+}
+
+@include variable(rem(900)) {
+    .field-card {
+        flex-direction: row;
+        flex-grow: 1;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

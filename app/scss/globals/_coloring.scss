@@ -6,14 +6,17 @@ body {
 
 .hero-section,
 .about-section,
-.contact-section {
+.contact-section,
+.field-card {
     background-color: $bg-color-light;
     & p {
         color: $bg-color-dark-shade1;
     }
 }
 
-.schedule-text-content {
+.schedule-text-content,
+.sponsors-text,
+.field-locs-aside {
     & h3 {
         color: $title-text-white;
     }
@@ -25,15 +28,6 @@ body {
 .win-loss-container {
     font-weight: bold;
     color: $title-text-white;
-}
-
-.sponsors-text {
-    & h3 {
-        color: $title-text-white;
-    }
-    & p {
-        color: $bg-color-light-tint;
-    }
 }
 
 header,
@@ -57,8 +51,7 @@ footer {
 }
 
 .link:hover,
-.link:active,
-.link:focus {
+.link:active {
     color: $team-color-orange-hover;
     cursor: pointer;
 }
