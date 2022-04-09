@@ -25,7 +25,7 @@ footer {
 
 @media (min-width: 320px) {
   footer {
-    padding: 1.25rem 0.625rem;
+    padding: 0.9375rem 0.625rem;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "internal external" "social author";
   }
@@ -36,14 +36,11 @@ footer {
 }
 @media (min-width: 720px) {
   footer {
+    padding: 1.875rem 1.25rem;
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas: "internal external social author";
   }
 }
-.mets-title {
-  max-width: 100%;
-}
-
 .nav-container {
   width: 100%;
   display: flex;
@@ -163,16 +160,14 @@ nav {
   }
 }
 aside {
-  margin-top: 2.5rem;
   background-color: #242424;
 }
 aside .win-loss-container {
   position: relative;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-bottom: 2.1875rem;
 }
 aside .win-loss-container::before {
   content: "";

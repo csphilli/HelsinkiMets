@@ -1,14 +1,15 @@
 @use "../abstracts" as *;
 
 aside {
-    margin-top: rem(40);
+    // margin-top: rem(40);
     background-color: $bg-color-dark;
 
     .win-loss-container {
         // border: 1px solid green;
         position: relative;
-        @include flexbox(column, center, center);
-        margin-bottom: rem(35);
+        // @include flexbox(column, center, center);
+        @include flexbox(row, center, center);
+        // margin-bottom: rem(35);
 
         &::before {
             content: "";

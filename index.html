@@ -29,41 +29,27 @@
                     <use xlink:href="img/logo-icons.svg#mets-header-text"></use>
                 </svg>
                 <nav>
-                    <!-- <a
-                        href="#"
-                        class="link nav-link"
-                        rel="noopener noreferrer"
-                        >home</a
-                    > -->
-                    <!-- <a
-                        href="#"
-                        class="link nav-link"
-                        rel="noopener noreferrer"
-                        >about</a
-                    > -->
-                    <!-- <a href="#" class="link nav-link">schedule</a> -->
-                    <!-- <a href="#" class="link nav-link" rel="noopener noreferrer"
-                        >contact us</a
-                    > -->
                     <a
                         href="field-locations.html"
                         class="link nav-link"
                         rel="noopener noreferrer"
                         >field locations</a
                     >
+                    <a
+                        href="success.html"
+                        class="link nav-link"
+                        rel="noopener noreferrer"
+                        >success</a
+                    >
                 </nav>
             </div>
         </header>
-        <main>
+        <main aria-label="main content describing baseball in finland">
             <section class="hero-section">
                 <div class="hero-content">
                     <div class="hero-images-collage">
-                        <!-- <img
-                            src="/img/HelsinkiMets.png"
-                            alt="helsinki mets logo"
-                            class="hero-img-1"
-                        /> -->
                         <svg
+                            aria-label="helsinki mets logo"
                             class="hero-img-1"
                             viewBox="0 0 295 295"
                             fill="none"
@@ -565,6 +551,7 @@
                             </defs>
                         </svg>
                         <svg
+                            aria-label="baseball finland logo"
                             class="hero-img-2"
                             viewBox="0 0 300 300"
                             fill="none"
@@ -953,14 +940,19 @@
                 </div>
             </section>
         </main>
-        <aside>
-            <div class="win-loss-container">
-                <h3>
-                    <span class="record-wins">W</span> :
-                    <span class="record-losses">L</span>
-                </h3>
+        <aside aria-label="Mets win loss and schedule section">
+            <div
+                aria-label="current season win and loss results for the helsinki mets"
+                class="win-loss-container"
+            >
+                <h4 aria-label="wins" data-wins="wins">W</h4>
+                <h5>&nbsp;:&nbsp;</h5>
+                <h4 aria-label="losses" data-wins="losses">L</h4>
             </div>
-            <div class="schedule-section">
+            <div
+                aria-label="Current season schedule section"
+                class="schedule-section"
+            >
                 <div class="schedule-text-content">
                     <h3>Game Schedule</h3>
                     <p>
@@ -968,6 +960,7 @@
                         like to come to a game but are unsure about where the
                         field is, please visit the
                         <a
+                            aria-label="field locations link"
                             class="link"
                             href="field-locations.html"
                             rel="noopener noreferrer"
@@ -978,7 +971,7 @@
                     <p>
                         If a game has a reported score, you can click on the row
                         and be taken to the full game stats page (external
-                        site).
+                        website).
                     </p>
                 </div>
                 <div class="schedule-grid">
@@ -1057,7 +1050,10 @@
                 </div>
             </div>
         </aside>
-        <section class="about-section">
+        <section
+            aria-label="about section for the helsinki mets"
+            class="about-section"
+        >
             <div class="about-text-container">
                 <h3>Who are the Helsinki Mets?</h3>
                 <p>
@@ -1081,7 +1077,7 @@
                 </p>
             </div>
         </section>
-        <section class="contact-section">
+        <section class="contact-section" id="contact">
             <div class="contact-text">
                 <h3>Questions? Interested in playing?</h3>
                 <p>
@@ -1091,6 +1087,7 @@
                 </p>
             </div>
             <form
+                aria-label="Contact form to send a message to the helsinki mets"
                 action="https://formsubmit.co/csphilli@gmail.com"
                 method="post"
                 class="form-s1"
@@ -1103,7 +1100,7 @@
                 <input
                     type="hidden"
                     name="_subject"
-                    value="Contact request from website"
+                    value="Contact form from website"
                 />
                 <div class="form-item">
                     <input
@@ -1137,10 +1134,16 @@
                         name="Message"
                     ></textarea>
                 </div>
-                <button type="submit" class="form-button">Send</button>
+                <button
+                    aria-label="button to send message"
+                    type="submit"
+                    class="form-button"
+                >
+                    Send
+                </button>
             </form>
         </section>
-        <section class="sponsors-section">
+        <section aria-label="league sponsors section" class="sponsors-section">
             <div class="sponsors-text">
                 <h3>League Sponsors</h3>
                 <p>
@@ -1150,68 +1153,9 @@
                 <p><em>Thank you very much!</em></p>
             </div>
             <div class="sponsors-grid">
-                <svg class="kuivalihakundi sponsor-icon">
-                    <a
-                        href="https://kuivalihakundi.com/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <use
-                            xlink:href="img/sponsor-icons.svg#kuivalihakundi"
-                        ></use>
-                    </a>
-                </svg>
-                <svg class="pointscene sponsor-icon">
-                    <a
-                        href="https://pointscene.com/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <use
-                            xlink:href="img/sponsor-icons.svg#point_scene"
-                        ></use>
-                    </a>
-                </svg>
-                <svg class="poppamies sponsor-icon">
-                    <a
-                        href="https://www.poppamies.fi/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <use xlink:href="img/sponsor-icons.svg#poppamies"></use>
-                    </a>
-                </svg>
-                <svg class="table_online sponsor-icon">
-                    <a
-                        href="https://www.tableonline.fi/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <use
-                            xlink:href="img/sponsor-icons.svg#table_online"
-                        ></use>
-                    </a>
-                </svg>
-                <svg class="superpark sponsor-icon">
-                    <a
-                        href="https://superpark.fi/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <use xlink:href="img/sponsor-icons.svg#superpark"></use>
-                    </a>
-                </svg>
-                <svg class="isku sponsor-icon">
-                    <a
-                        href="https://www.isku.com/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <use xlink:href="img/sponsor-icons.svg#isku"></use>
-                    </a>
-                </svg>
                 <svg class="fat_lizard sponsor-icon">
                     <a
+                        aria-label="fat lizard beer external company link"
                         href="https://www.fatlizard.beer/"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -1223,6 +1167,7 @@
                 </svg>
                 <svg class="tallink sponsor-icon">
                     <a
+                        aria-label="tallink external company link"
                         href="https://www.tallink.com/"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -1232,6 +1177,7 @@
                 </svg>
                 <svg class="dear_lucy sponsor-icon">
                     <a
+                        aria-label="dear lucy external company link"
                         href="https://www.dearlucy.co/"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -1239,11 +1185,84 @@
                         <use xlink:href="img/sponsor-icons.svg#dear_lucy"></use>
                     </a>
                 </svg>
+
+                <svg class="pointscene sponsor-icon">
+                    <a
+                        aria-label="point scene external company link"
+                        href="https://pointscene.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <use
+                            xlink:href="img/sponsor-icons.svg#point_scene"
+                        ></use>
+                    </a>
+                </svg>
+                <svg class="poppamies sponsor-icon">
+                    <a
+                        aria-label="poppamies company"
+                        href="https://www.poppamies.fi/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <use xlink:href="img/sponsor-icons.svg#poppamies"></use>
+                    </a>
+                </svg>
+                <svg class="table_online sponsor-icon">
+                    <a
+                        aria-label="table online external company link"
+                        href="https://www.tableonline.fi/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <use
+                            xlink:href="img/sponsor-icons.svg#table_online"
+                        ></use>
+                    </a>
+                </svg>
+                <svg class="kuivalihakundi sponsor-icon">
+                    <a
+                        aria-label="kuivalihakundi external company link"
+                        href="https://kuivalihakundi.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <use
+                            xlink:href="img/sponsor-icons.svg#kuivalihakundi"
+                        ></use>
+                    </a>
+                </svg>
+
+                <svg class="isku sponsor-icon">
+                    <a
+                        aria-label="isku external company link"
+                        href="https://www.isku.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <use xlink:href="img/sponsor-icons.svg#isku"></use>
+                    </a>
+                </svg>
+                <svg class="superpark sponsor-icon">
+                    <a
+                        aria-label="super park external company link"
+                        href="https://superpark.fi/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <use xlink:href="img/sponsor-icons.svg#superpark"></use>
+                    </a>
+                </svg>
             </div>
         </section>
-        <footer>
-            <div class="internal-links">
-                <h4 class="grid-title">Pages</h4>
+        <footer
+            aria-label="footer with internal links, external links, social media links, and website author link"
+        >
+            <div
+                aria-label="internal website pages section"
+                class="internal-links"
+            >
+                <h4 class="grid-title">Mets Pages</h4>
                 <ul role="list" class="footer-links">
                     <li>
                         <a
@@ -1281,7 +1300,11 @@
             </div>
             <div class="external-links">
                 <h4 class="grid-title">External Links</h4>
-                <ul role="list" class="footer-links">
+                <ul
+                    aria-label="external website links"
+                    role="list"
+                    class="footer-links"
+                >
                     <li>
                         <a
                             href="https://www.pesis.fi/baseball/"
@@ -1311,10 +1334,11 @@
                     </li>
                 </ul>
             </div>
-            <div class="social-links">
+            <div aria-label="social links section" class="social-links">
                 <h4 class="grid-title">Follow Us!</h4>
                 <div class="footer-links social-links-container">
                     <a
+                        aria-label="facebook page for the helsinki mets"
                         class="link"
                         href="https://www.facebook.com/HelsinkiMets"
                         rel="noopener noreferrer"
@@ -1333,6 +1357,7 @@
                         </svg>
                     </a>
                     <a
+                        aria-label="instagram page for the helsinki mets"
                         class="link"
                         href="https://www.instagram.com/helsinki_mets/"
                         rel="noopener noreferrer"
@@ -1351,6 +1376,7 @@
                         </svg>
                     </a>
                     <a
+                        aria-label="twitter page for the helsinki mets"
                         href="https://twitter.com/helsinkimets"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -1370,7 +1396,11 @@
             </div>
             <div class="author-link">
                 <h4 class="grid-title">Site by</h4>
-                <ul role="list" class="footer-links">
+                <ul
+                    aria-label="Site by section"
+                    role="list"
+                    class="footer-links"
+                >
                     <li>
                         <a
                             href="https://www.project3.io"

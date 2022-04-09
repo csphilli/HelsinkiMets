@@ -30,7 +30,8 @@ footer {
 
 @include sm {
     footer {
-        padding: rem(20) rem(10);
+        // padding: rem(20) rem(10);
+        padding: rem(15) rem(10);
         grid-template-columns: 1fr 1fr;
         grid-template-areas:
             "internal external"
@@ -43,7 +44,20 @@ footer {
 
 @include md {
     footer {
+        padding: rem(30) rem(20);
         grid-template-columns: repeat(4, 1fr);
         grid-template-areas: "internal external social author";
     }
 }
+
+// @include sm {
+//     .contact-section {
+//         padding: rem(15) rem(10);
+//     }
+// }
+
+// @include md {
+//     .contact-section {
+//         padding: rem(30) rem(20);
+//     }
+// }

@@ -3,7 +3,10 @@
     <head>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, minimal-scale=1.0"
+        />
         <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,12 +17,12 @@
 
         <link rel="stylesheet" href="/dist/reset-styles.css" />
         <link rel="stylesheet" href="/dist/global-styles.css" />
-        <link rel="stylesheet" href="/dist/field-locations.css" />
-        <script defer src="/dist/field-locations-script.js"></script>
+        <link rel="stylesheet" href="/dist/success.css" />
+        <script defer src="/dist/script.js"></script>
 
-        <title>Helsinki Mets | Field Locations</title>
+        <title>Helsinki Mets | Submission Success</title>
     </head>
-    <body class="field-locations-grid">
+    <body>
         <header>
             <div class="nav-container">
                 <svg class="mets-title">
@@ -32,158 +35,27 @@
                         rel="noopener noreferrer"
                         >home</a
                     >
+                    <a
+                        href="field-locations.html"
+                        class="link nav-link"
+                        rel="noopener noreferrer"
+                        >field locations</a
+                    >
                 </nav>
             </div>
         </header>
-        <aside class="field-locs-aside">
-            <h3>About</h3>
+        <main class="success-container">
+            <h2>Message Successfully Sent!</h2>
             <p>
-                Why are most of the fields NOT traditional baseball fields?
-                Although Finland has a national team for this style of baseball,
-                Finland has its own variation of the sport.
+                Thank you for taking the time to contact the Mets. We will get
+                back to you as soon as we can.
             </p>
-            <p>
-                Pesäpallo, directly translated to <em>nest ball</em>, is the
-                country's main style of this sport. Due to the lack of
-                popularity in baseball, there hasn't been an incredible amount
-                of funding towards the sport here to invest in dedicated
-                facilities.
-            </p>
-            <p>
-                Despite that, there has been an increasing amount of attention
-                to this sport due to its international appeal as well as many
-                talented prospects that have potential to be successfull abroad.
-            </p>
-            <p>
-                Additionally, many individuals have gone above and beyond in
-                order to make this sport more popular in Finland. Our hats
-                definitly go off to them!
-            </p>
-        </aside>
-        <main>
-            <section class="field-card">
-                <div class="field-card-text">
-                    <h2>Myllypuro, Helsinki</h2>
-                    <h4>Home Teams: Expos, Mets, Puumat</h4>
-                    <p>
-                        The opening of the field was held in the summer of 2019
-                        and it was completed in its entirety for the season
-                        2020. The surface material of the field is sand and
-                        natural grass. The ground has fixed backstops and side
-                        fences. The outfield fence must be erected separately
-                        for match events.
-                    </p>
-                    <p>
-                        The field has dugouts, a bullpen, a batting cage and a
-                        storage room for the home and away team. Stadium seating
-                        is available behind the backstop.
-                    </p>
-                    <h3>address</h3>
-                    <p>
-                        The field is located in Myllypuro Sports Park and the
-                        nearest address is
-                        <em>Jäätanssipolku 1, 00900 Helsinki</em>
-                    </p>
-                </div>
-                <img
-                    loading="lazy"
-                    class="field-card-img"
-                    src="img/helsinki-min.png"
-                    alt="picture of the helsinki baseball field"
-                />
-            </section>
-            <section class="field-card">
-                <div class="field-card-text">
-                    <h2>Pirates Stadium, Lahti</h2>
-                    <h4>Home Team(s): Pirates</h4>
-                    <p>
-                        The Lahti Pirates Stadium is Lahti Pirates' home field
-                        and was the first field in Finland to be completed
-                        exclusively for baseball. The surface material of the
-                        field is artificial grass and sand. The field has fixed
-                        fences and dugouts for the home and away team.
-                    </p>
-                    <h3>address</h3>
-                    <p>
-                        The field is located at the end of
-                        <em>Ristkarinkatu</em> in Lahti.
-                    </p>
-                </div>
-                <img
-                    class="field-card-img"
-                    src="img/lahti-min.png"
-                    alt="picture of the lahti baseball field"
-                />
-            </section>
 
-            <section class="field-card">
-                <div class="field-card-text">
-                    <h2>Käpylä, Helsinki</h2>
-                    <p>
-                        The field surface is mixure of small stone and sand with
-                        a fixed backstop and side fences.
-                    </p>
-                    <h3>address</h3>
-                    <p>
-                        The Käpylä sand field is located in the Käpylä sports
-                        park at <em>Mäkelänkatu 72, 00610 Helsinki.</em>
-                    </p>
-                </div>
-                <img
-                    class="field-card-img"
-                    src="img/kaypyla-min.png"
-                    alt="picture of the Käpylä baseball field"
-                />
-            </section>
-            <section class="field-card">
-                <div class="field-card-text">
-                    <h2>Kilo, Espoo</h2>
-                    <p>
-                        The field in Kilo is a school field with smaller
-                        dimensions in terms for baseball usage. Lefties
-                        certainly have an advantage for home runs.
-                    </p>
-                    <h3>address</h3>
-                    <p><em>Aspelintie 3 02630 Espoo</em></p>
-                </div>
-                <img
-                    class="field-card-img"
-                    src="img/kilo-min.png"
-                    alt="picture of the kilo baseball field"
-                />
-            </section>
-            <section class="field-card">
-                <div class="field-card-text">
-                    <h2>Tampere</h2>
-                    <h4>Home Team(s): Tigers</h4>
-                    <p>
-                        The field in Tampere is a mixed of crushed stone and
-                        sand featuring a separately assembled backstop.
-                    </p>
-                    <h3>address</h3>
-                    <p><em> Ilmailunkatu 11, 33900 Tampere</em></p>
-                </div>
-                <img
-                    class="field-card-img"
-                    src="img/tampere-min.png"
-                    alt="picture of the tampere baseball field"
-                />
-            </section>
-            <section class="field-card">
-                <div class="field-card-text">
-                    <h2>Turku</h2>
-                    <p>The field in Turku has a stone ash surface.</p>
-                    <h3>address</h3>
-                    <p><em>Lemminkäisenkatu 11, 20520 Turku</em></p>
-                </div>
-                <img
-                    class="field-card-img"
-                    src="img/turku-min.png"
-                    alt="picture of the turku baseball field"
-                />
-            </section>
+            <p>
+                Please use any of the links around this page to return to normal
+                browsing.
+            </p>
         </main>
-
         <footer
             aria-label="footer with internal links, external links, social media links, and website author link"
         >

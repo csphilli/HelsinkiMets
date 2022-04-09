@@ -13,6 +13,7 @@ const scss_files = [
     "global-styles",
     "homepage",
     "field-locations",
+    "success",
 ];
 
 const js_files = ["script"];
