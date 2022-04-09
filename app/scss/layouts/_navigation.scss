@@ -1,5 +1,9 @@
 @use "../abstracts" as *;
 
+header h1 {
+    @include flexbox(center, center, center);
+}
+
 .nav-container {
     // border: 1px solid red;
     width: 100%;

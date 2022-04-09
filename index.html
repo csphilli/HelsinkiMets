@@ -23,23 +23,20 @@
         <title>Helsinki Mets | Home</title>
     </head>
     <body class="homepage-grid">
-        <header>
-            <div class="nav-container">
+        <header aria-label="Welcome to the helsinki mets webpage">
+            <h1 aria-label="Helsinki Mets">
                 <svg class="mets-title">
                     <use xlink:href="img/logo-icons.svg#mets-header-text"></use>
                 </svg>
-                <nav>
+            </h1>
+            <div class="nav-container">
+                <nav aria-label="navigation links">
                     <a
+                        aria-label="navigation link to field locations page"
                         href="field-locations.html"
                         class="link nav-link"
                         rel="noopener noreferrer"
                         >field locations</a
-                    >
-                    <a
-                        href="success.html"
-                        class="link nav-link"
-                        rel="noopener noreferrer"
-                        >success</a
                     >
                 </nav>
             </div>
@@ -920,7 +917,9 @@
                         <p>
                             The Helsinki Mets are part of a multi-country
                             baseball league in Finland. Currently, the league is
-                            comprised of six teams.
+                            comprised of six teams. In Finland the Mets, Expos,
+                            Puumat, Tigers, and Pirates. And making the sixth
+                            team, the Panthers from Estonia!
                         </p>
                         <p>
                             The country already has a national version of their
@@ -929,12 +928,9 @@
                         </p>
                         <p>
                             Would you like to play with us? Or just know more
-                            about the league here? What's involved? Any question
-                            you have, head on over to the
-                            <a class="link" href="#" rel="noopener noreferrer"
-                                >contact</a
-                            >
-                            page and send us a message.
+                            about the league here? What's involved? Any
+                            questions you have for us, fill out the contact form
+                            below.
                         </p>
                     </div>
                 </div>
@@ -974,78 +970,183 @@
                         website).
                     </p>
                 </div>
-                <div class="schedule-grid">
-                    <div class="grid-col schedule-heading">
+                <div
+                    aria-label="current season game schedule"
+                    class="schedule-grid"
+                >
+                    <div
+                        aria-label="game schedule columns"
+                        class="grid-col schedule-heading"
+                    >
                         <h4 class="g-item col-heading">Date</h4>
                         <h4 class="g-item col-heading">Time</h4>
                         <h4 class="g-item col-heading">Teams</h4>
                         <h4 class="g-item col-heading">Score</h4>
                     </div>
-                    <div class="grid-col schedule-game-row">
-                        <p class="g-item">22-3</p>
-                        <p class="g-item">18:30</p>
-                        <p class="g-item">Mets @ Puumat</p>
-                        <p class="g-item">5-50</p>
+                    <div
+                        aria-label="game information"
+                        class="grid-col schedule-game-row"
+                    >
+                        <p aria-label="game date" class="g-item">15-5</p>
+                        <p aria-label="game time" class="g-item">?</p>
+                        <p aria-label="teams playing" class="g-item">
+                            Puumat @ Mets
+                        </p>
+                        <p aria-label="final score" class="g-item">--</p>
                     </div>
-                    <div class="grid-col schedule-game-row">
-                        <p class="g-item">22-3</p>
-                        <p class="g-item">18:30</p>
-                        <p class="g-item">Mets @ Puumat</p>
-                        <p class="g-item">5-50</p>
+                    <div
+                        aria-label="game information"
+                        class="grid-col schedule-game-row"
+                    >
+                        <p aria-label="game date" class="g-item">15-5</p>
+                        <p aria-label="game time" class="g-item">?</p>
+                        <p aria-label="teams playing" class="g-item">
+                            Mets @ Pirates
+                        </p>
+                        <p aria-label="final score" class="g-item">--</p>
                     </div>
-                    <div class="grid-col schedule-game-row">
-                        <p class="g-item">22-3</p>
-                        <p class="g-item">18:30</p>
-                        <p class="g-item">Mets @ Puumat</p>
-                        <p class="g-item">5-50</p>
+                    <div
+                        aria-label="game information"
+                        class="grid-col schedule-game-row"
+                    >
+                        <p aria-label="game date" class="g-item">29-5</p>
+                        <p aria-label="game time" class="g-item">?</p>
+                        <p aria-label="teams playing" class="g-item">
+                            Panthers @ Mets
+                        </p>
+                        <p aria-label="final score" class="g-item">--</p>
                     </div>
-                    <div class="grid-col schedule-game-row">
-                        <p class="g-item">22-3</p>
-                        <p class="g-item">18:30</p>
-                        <p class="g-item">Mets @ Puumat</p>
-                        <p class="g-item">5-50</p>
+                    <div
+                        aria-label="game information"
+                        class="grid-col schedule-game-row"
+                    >
+                        <p aria-label="game date" class="g-item">29-5</p>
+                        <p aria-label="game time" class="g-item">?</p>
+                        <p aria-label="teams playing" class="g-item">
+                            Panthers @ Mets
+                        </p>
+                        <p aria-label="final score" class="g-item">--</p>
                     </div>
-                    <div class="grid-col schedule-game-row">
-                        <p class="g-item">22-3</p>
-                        <p class="g-item">18:30</p>
-                        <p class="g-item">Mets @ Puumat</p>
-                        <p class="g-item">5-50</p>
+                    <div
+                        aria-label="game information"
+                        class="grid-col schedule-game-row"
+                    >
+                        <p aria-label="game date" class="g-item">3-6</p>
+                        <p aria-label="game time" class="g-item">18:30</p>
+                        <p aria-label="teams playing" class="g-item">
+                            Mets @ Expos
+                        </p>
+                        <p aria-label="final score" class="g-item">--</p>
                     </div>
-                    <div class="grid-col schedule-game-row">
-                        <p class="g-item">22-3</p>
-                        <p class="g-item">18:30</p>
-                        <p class="g-item">Mets @ Puumat</p>
-                        <p class="g-item">5-50</p>
+                    <div
+                        aria-label="game information"
+                        class="grid-col schedule-game-row"
+                    >
+                        <p aria-label="game date" class="g-item">15-6</p>
+                        <p aria-label="game time" class="g-item">18:30</p>
+                        <p aria-label="teams playing" class="g-item">
+                            Pirates @ Mets
+                        </p>
+                        <p aria-label="final score" class="g-item">--</p>
                     </div>
-                    <div class="grid-col schedule-game-row">
-                        <p class="g-item">22-3</p>
-                        <p class="g-item">18:30</p>
-                        <p class="g-item">Mets @ Puumat</p>
-                        <p class="g-item">5-50</p>
+                    <div
+                        aria-label="game information"
+                        class="grid-col schedule-game-row"
+                    >
+                        <p aria-label="game date" class="g-item">22-6</p>
+                        <p aria-label="game time" class="g-item">18:30</p>
+                        <p aria-label="teams playing" class="g-item">
+                            Mets @ Puumat
+                        </p>
+                        <p aria-label="final score" class="g-item">--</p>
                     </div>
-                    <div class="grid-col schedule-game-row">
-                        <p class="g-item">22-3</p>
-                        <p class="g-item">18:30</p>
-                        <p class="g-item">Mets @ Puumat</p>
-                        <p class="g-item">5-50</p>
+                    <div
+                        aria-label="game information"
+                        class="grid-col schedule-game-row"
+                    >
+                        <p aria-label="game date" class="g-item">29-6</p>
+                        <p aria-label="game time" class="g-item">18:30</p>
+                        <p aria-label="teams playing" class="g-item">
+                            Mets @ Tigers
+                        </p>
+                        <p aria-label="final score" class="g-item">--</p>
                     </div>
-                    <div class="grid-col schedule-game-row">
-                        <p class="g-item">22-3</p>
-                        <p class="g-item">18:30</p>
-                        <p class="g-item">Mets @ Puumat</p>
-                        <p class="g-item">5-50</p>
+                    <div
+                        aria-label="game information"
+                        class="grid-col schedule-game-row"
+                    >
+                        <p aria-label="game date" class="g-item">1-7</p>
+                        <p aria-label="game time" class="g-item">18:30</p>
+                        <p aria-label="teams playing" class="g-item">
+                            Pirates @ Mets
+                        </p>
+                        <p aria-label="final score" class="g-item">--</p>
                     </div>
-                    <div class="grid-col schedule-game-row">
-                        <p class="g-item">22-3</p>
-                        <p class="g-item">18:30</p>
-                        <p class="g-item">Mets @ Puumat</p>
-                        <p class="g-item">5-50</p>
+                    <div
+                        aria-label="game information"
+                        class="grid-col schedule-game-row"
+                    >
+                        <p aria-label="game date" class="g-item">20-7</p>
+                        <p aria-label="game time" class="g-item">18:30</p>
+                        <p aria-label="teams playing" class="g-item">
+                            Tigers @ Mets
+                        </p>
+                        <p aria-label="final score" class="g-item">--</p>
                     </div>
-                    <div class="grid-col schedule-game-row">
-                        <p class="g-item">22-3</p>
-                        <p class="g-item">18:30</p>
-                        <p class="g-item">Mets @ Puumat</p>
-                        <p class="g-item">5-50</p>
+                    <div
+                        aria-label="game information"
+                        class="grid-col schedule-game-row"
+                    >
+                        <p aria-label="game date" class="g-item">25-7</p>
+                        <p aria-label="game time" class="g-item">18:30</p>
+                        <p aria-label="teams playing" class="g-item">
+                            Expos @ Mets
+                        </p>
+                        <p aria-label="final score" class="g-item">--</p>
+                    </div>
+                    <div
+                        aria-label="game information"
+                        class="grid-col schedule-game-row"
+                    >
+                        <p aria-label="game date" class="g-item">1-8</p>
+                        <p aria-label="game time" class="g-item">18:00</p>
+                        <p aria-label="teams playing" class="g-item">
+                            Mets @ Puumat
+                        </p>
+                        <p aria-label="final score" class="g-item">--</p>
+                    </div>
+                    <div
+                        aria-label="game information"
+                        class="grid-col schedule-game-row"
+                    >
+                        <p aria-label="game date" class="g-item">6-8</p>
+                        <p aria-label="game time" class="g-item">18:00</p>
+                        <p aria-label="teams playing" class="g-item">
+                            Mets @ Panthers
+                        </p>
+                        <p aria-label="final score" class="g-item">--</p>
+                    </div>
+                    <div
+                        aria-label="game information"
+                        class="grid-col schedule-game-row"
+                    >
+                        <p aria-label="game date" class="g-item">10-8</p>
+                        <p aria-label="game time" class="g-item">18:00</p>
+                        <p aria-label="teams playing" class="g-item">
+                            Mets @ Tigers
+                        </p>
+                        <p aria-label="final score" class="g-item">--</p>
+                    </div>
+                    <div
+                        aria-label="game information"
+                        class="grid-col schedule-game-row"
+                    >
+                        <p aria-label="game date" class="g-item">15-8</p>
+                        <p aria-label="game time" class="g-item">18:00</p>
+                        <p aria-label="teams playing" class="g-item">
+                            Mets @ Expos
+                        </p>
+                        <p aria-label="final score" class="g-item">--</p>
                     </div>
                 </div>
             </div>
@@ -1266,34 +1367,18 @@
                 <ul role="list" class="footer-links">
                     <li>
                         <a
-                            href="#"
+                            href="index.html"
+                            class="link footer-link"
+                            rel="noopener noreferrer"
+                            >home</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="field-locations.html"
                             class="link footer-link"
                             rel="noopener noreferrer"
                             >field locations</a
-                        >
-                    </li>
-                    <li>
-                        <a
-                            href="#"
-                            class="link footer-link"
-                            rel="noopener noreferrer"
-                            >contact us</a
-                        >
-                    </li>
-                    <li>
-                        <a
-                            href="#"
-                            class="link footer-link"
-                            rel="noopener noreferrer"
-                            >about us+</a
-                        >
-                    </li>
-                    <li>
-                        <a
-                            href="#"
-                            class="link footer-link"
-                            rel="noopener noreferrer"
-                            >league teams</a
                         >
                     </li>
                 </ul>
@@ -1332,9 +1417,18 @@
                             >League Schedule</a
                         >
                     </li>
+                    <li>
+                        <a
+                            href="https://www.pesis.fi/baseball/kilpailu/sm-sarja/"
+                            class="link footer-link"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                            >League Teams</a
+                        >
+                    </li>
                 </ul>
             </div>
-            <div aria-label="social links section" class="social-links">
+            <div aria-label="social media links section" class="social-links">
                 <h4 class="grid-title">Follow Us!</h4>
                 <div class="footer-links social-links-container">
                     <a

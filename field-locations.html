@@ -21,10 +21,12 @@
     </head>
     <body class="field-locations-grid">
         <header>
-            <div class="nav-container">
+            <h1 aria-label="Helsinki Mets">
                 <svg class="mets-title">
                     <use xlink:href="img/logo-icons.svg#mets-header-text"></use>
                 </svg>
+            </h1>
+            <div class="nav-container">
                 <nav>
                     <a
                         href="index.html"
@@ -35,7 +37,10 @@
                 </nav>
             </div>
         </header>
-        <aside class="field-locs-aside">
+        <aside
+            aria-label="about section with details about the baseball fields in finland"
+            class="field-locs-aside"
+        >
             <h3>About</h3>
             <p>
                 Why are most of the fields NOT traditional baseball fields?
@@ -60,8 +65,8 @@
                 definitly go off to them!
             </p>
         </aside>
-        <main>
-            <section class="field-card">
+        <main aria-label="field locations section">
+            <section aria-label="field details" class="field-card">
                 <div class="field-card-text">
                     <h2>Myllypuro, Helsinki</h2>
                     <h4>Home Teams: Expos, Mets, Puumat</h4>
@@ -79,20 +84,21 @@
                         is available behind the backstop.
                     </p>
                     <h3>address</h3>
-                    <p>
+                    <p aria-label="field address">
                         The field is located in Myllypuro Sports Park and the
                         nearest address is
                         <em>Jäätanssipolku 1, 00900 Helsinki</em>
                     </p>
                 </div>
                 <img
+                    aria-label="image of the baseball field"
                     loading="lazy"
                     class="field-card-img"
                     src="img/helsinki-min.png"
                     alt="picture of the helsinki baseball field"
                 />
             </section>
-            <section class="field-card">
+            <section aria-label="field details" class="field-card">
                 <div class="field-card-text">
                     <h2>Pirates Stadium, Lahti</h2>
                     <h4>Home Team(s): Pirates</h4>
@@ -104,19 +110,20 @@
                         fences and dugouts for the home and away team.
                     </p>
                     <h3>address</h3>
-                    <p>
+                    <p aria-label="field address">
                         The field is located at the end of
                         <em>Ristkarinkatu</em> in Lahti.
                     </p>
                 </div>
                 <img
+                    aria-label="image of the baseball field"
                     class="field-card-img"
                     src="img/lahti-min.png"
                     alt="picture of the lahti baseball field"
                 />
             </section>
 
-            <section class="field-card">
+            <section aria-label="field details" class="field-card">
                 <div class="field-card-text">
                     <h2>Käpylä, Helsinki</h2>
                     <p>
@@ -124,18 +131,19 @@
                         a fixed backstop and side fences.
                     </p>
                     <h3>address</h3>
-                    <p>
+                    <p aria-label="field address">
                         The Käpylä sand field is located in the Käpylä sports
                         park at <em>Mäkelänkatu 72, 00610 Helsinki.</em>
                     </p>
                 </div>
                 <img
+                    aria-label="image of the baseball field"
                     class="field-card-img"
                     src="img/kaypyla-min.png"
                     alt="picture of the Käpylä baseball field"
                 />
             </section>
-            <section class="field-card">
+            <section aria-label="field details" class="field-card">
                 <div class="field-card-text">
                     <h2>Kilo, Espoo</h2>
                     <p>
@@ -144,15 +152,18 @@
                         certainly have an advantage for home runs.
                     </p>
                     <h3>address</h3>
-                    <p><em>Aspelintie 3 02630 Espoo</em></p>
+                    <p aria-label="field address">
+                        <em>Aspelintie 3 02630 Espoo</em>
+                    </p>
                 </div>
                 <img
+                    aria-label="image of the baseball field"
                     class="field-card-img"
                     src="img/kilo-min.png"
                     alt="picture of the kilo baseball field"
                 />
             </section>
-            <section class="field-card">
+            <section aria-label="field details" class="field-card">
                 <div class="field-card-text">
                     <h2>Tampere</h2>
                     <h4>Home Team(s): Tigers</h4>
@@ -161,22 +172,28 @@
                         sand featuring a separately assembled backstop.
                     </p>
                     <h3>address</h3>
-                    <p><em> Ilmailunkatu 11, 33900 Tampere</em></p>
+                    <p aria-label="field address">
+                        <em> Ilmailunkatu 11, 33900 Tampere</em>
+                    </p>
                 </div>
                 <img
+                    aria-label="image of the baseball field"
                     class="field-card-img"
                     src="img/tampere-min.png"
                     alt="picture of the tampere baseball field"
                 />
             </section>
-            <section class="field-card">
+            <section aria-label="field details" class="field-card">
                 <div class="field-card-text">
                     <h2>Turku</h2>
                     <p>The field in Turku has a stone ash surface.</p>
                     <h3>address</h3>
-                    <p><em>Lemminkäisenkatu 11, 20520 Turku</em></p>
+                    <p aria-label="field address">
+                        <em>Lemminkäisenkatu 11, 20520 Turku</em>
+                    </p>
                 </div>
                 <img
+                    aria-label="image of the baseball field"
                     class="field-card-img"
                     src="img/turku-min.png"
                     alt="picture of the turku baseball field"
@@ -195,34 +212,18 @@
                 <ul role="list" class="footer-links">
                     <li>
                         <a
-                            href="#"
+                            href="index.html"
+                            class="link footer-link"
+                            rel="noopener noreferrer"
+                            >home</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="field-locations.html"
                             class="link footer-link"
                             rel="noopener noreferrer"
                             >field locations</a
-                        >
-                    </li>
-                    <li>
-                        <a
-                            href="#"
-                            class="link footer-link"
-                            rel="noopener noreferrer"
-                            >contact us</a
-                        >
-                    </li>
-                    <li>
-                        <a
-                            href="#"
-                            class="link footer-link"
-                            rel="noopener noreferrer"
-                            >about us+</a
-                        >
-                    </li>
-                    <li>
-                        <a
-                            href="#"
-                            class="link footer-link"
-                            rel="noopener noreferrer"
-                            >league teams</a
                         >
                     </li>
                 </ul>
@@ -261,9 +262,18 @@
                             >League Schedule</a
                         >
                     </li>
+                    <li>
+                        <a
+                            href="https://www.pesis.fi/baseball/kilpailu/sm-sarja/"
+                            class="link footer-link"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                            >League Teams</a
+                        >
+                    </li>
                 </ul>
             </div>
-            <div aria-label="social links section" class="social-links">
+            <div aria-label="social media links section" class="social-links">
                 <h4 class="grid-title">Follow Us!</h4>
                 <div class="footer-links social-links-container">
                     <a

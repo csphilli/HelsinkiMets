@@ -41,6 +41,13 @@ footer {
     grid-template-areas: "internal external social author";
   }
 }
+header h1 {
+  display: flex;
+  flex-direction: center;
+  justify-content: center;
+  align-items: center;
+}
+
 .nav-container {
   width: 100%;
   display: flex;
@@ -57,11 +64,16 @@ nav {
   gap: 1rem;
 }
 
+.hero-text-container h2 {
+  font-size: 2.1875rem;
+}
+
 .hero-images-collage {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-bottom: 3.052rem;
+  margin-bottom: 5rem;
+  filter: drop-shadow(1px 1px 20px rgba(0, 0, 0, 0.2));
 }
 .hero-images-collage .hero-img-1,
 .hero-images-collage .hero-img-2 {
@@ -323,7 +335,7 @@ aside .schedule-grid .grid-col {
 
 @media (min-width: 720px) {
   .homepage-grid {
-    grid-template-columns: 1fr 20.9375rem;
+    grid-template-columns: 1fr 21.875rem;
     max-width: 56.25rem;
     margin: 0 auto;
     grid-template-areas: "header aside" "main	aside" "about	sponsors" "contact	sponsors" "footer footer";
