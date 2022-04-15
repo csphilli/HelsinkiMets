@@ -1,9 +1,7 @@
 @use "../abstracts/" as *;
 
 .field-card {
-    // border: 1px solid purple;
     @include flexbox(column);
-    // gap: rem(20);
     margin-bottom: rem(20);
     .field-card-text {
         width: 100%;
@@ -12,7 +10,6 @@
         margin: rem(10) auto;
         max-width: min(rem(300), 70%);
         max-height: min(rem(300), 100%);
-        // height: auto;
     }
     &:last-child {
         margin-bottom: 0;
