@@ -1,18 +1,25 @@
 @use "../abstracts/" as *;
 
+.field-locs-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: rem(20);
+}
+
 .field-card {
-    @include flexbox(column);
-    margin-bottom: rem(20);
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
     .field-card-text {
         width: 100%;
     }
-    .field-card-img {
-        margin: rem(10) auto;
-        max-width: min(rem(300), 70%);
-        max-height: min(rem(300), 100%);
-    }
     &:last-child {
         margin-bottom: 0;
+    }
+
+    .field-card-img {
+        box-shadow: 1px 2px 25px rgba(0, 0, 0, 0.3);
+        border-radius: rem(5);
     }
 }
 
@@ -34,13 +41,11 @@
     .field-card {
         padding: rem(15) rem(10);
     }
-    .field-card-img {
-        max-width: rem(300);
-    }
 }
 
 @include md {
     .field-card {
+        grid-template-columns: 1fr 1fr;
         padding: rem(30) rem(20);
 
         .field-card-text {
@@ -48,17 +53,16 @@
         }
 
         .field-card-img {
-            width: min(rem(300), 80%);
-            height: min(rem(300), 80%);
+            max-width: rem(350);
         }
     }
 }
 
-@include variable(rem(900)) {
-    .field-card {
-        flex-direction: row;
-        flex-grow: 1;
-        justify-content: space-between;
-        align-items: center;
-    }
-}
+// @include variable(rem(900)) {
+//     .field-card {
+//         flex-direction: row;
+//         flex-grow: 1;
+//         justify-content: space-between;
+//         align-items: center;
+//     }
+// }
