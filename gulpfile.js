@@ -6,44 +6,29 @@ const terser = require("gulp-terser");
 const browserSync = require("browser-sync").create();
 const babel = require("gulp-babel");
 const autoprefixer = require("autoprefixer");
-
-// If ever having to compile multiple files... Just create the main .scss/.js files at the root of app/scsss or app/js respectively and list them here in their respective const declarations (without extensions)
-const scss_files = [
-    "reset-styles",
-    "global-styles",
-    "homepage",
-    "field-locations",
-    "success",
-];
-
-const js_files = ["script"];
-
-const files_to_Arr = function (fileArr, extension) {
-    const prefix = `app/${extension}/`;
-    const suffix = `.${extension}`;
-    let files = [];
-    fileArr.forEach((name) => files.push(prefix + name + suffix));
-    console.log("Compiling:", files);
-    return files;
-};
+const htmlMin = require("gulp-htmlmin");
 
 // Sass task
 function scssTask() {
-    return (
-        src(files_to_Arr(scss_files, "scss"), {
-            sourcemaps: true,
-        })
-            .pipe(sass())
-            .pipe(postcss([autoprefixer()]))
-            // .pipe(postcss(cssnano()))
-            // .pipe(postcss([autoprefixer(), cssnano()]))
-            .pipe(dest("dist", { sourcemaps: "." }))
-    );
+    return src("app/scss/*.scss", {
+        sourcemaps: false,
+    })
+        .pipe(sass())
+        .pipe(postcss([autoprefixer()]))
+        .pipe(postcss([autoprefixer(), cssnano()]))
+        .pipe(dest("dist", { sourcemaps: "." }));
+}
+
+// minify HTML
+function minHtml() {
+    return src("app/src/*.html", { sourcemaps: false })
+        .pipe(htmlMin({ collapseWhitespace: true }))
+        .pipe(dest("dist", { sourcemaps: "." }));
 }
 
 // JS task
 function jsTask() {
-    return src(files_to_Arr(js_files, "js"), { sourcemaps: true })
+    return src("app/js/*.js", { sourcemaps: false })
         .pipe(babel({ presets: ["@babel/env"] }))
         .pipe(terser())
         .pipe(dest("dist", { sroucemaps: "." }));
@@ -53,7 +38,7 @@ function jsTask() {
 function browserSyncServe(cb) {
     browserSync.init({
         server: {
-            baseDir: ".",
+            baseDir: "dist/",
         },
         notify: {
             styles: {
@@ -73,7 +58,7 @@ function browserSyncReload(cb) {
 
 // Watch Task
 function watchTask() {
-    watch("*.html", browserSyncReload);
+    watch("app/src/*.html", series(minHtml, browserSyncReload));
     watch(
         ["app/scss/**/*.scss", "app/js/**/*.js"],
         series(scssTask, jsTask, browserSyncReload)
@@ -81,4 +66,10 @@ function watchTask() {
 }
 
 // Default gulp task
-exports.default = series(scssTask, jsTask, browserSyncServe, watchTask);
+exports.default = series(
+    scssTask,
+    jsTask,
+    minHtml,
+    browserSyncServe,
+    watchTask
+);
