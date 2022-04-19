@@ -11,15 +11,37 @@
             href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Oswald:wght@400;500;600;700&display=swap"
             rel="stylesheet"
         />
+        <!-- Twitter sharing tags -->
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@helsinkimets" />
+        <meta name="twitter:creator" content="@helsinkimets" />
+        <!-- Facebook/Twitter sharing meta tags (Twitter uses some of these too) -->
+        <meta property="og:url" content="https://www.helsinkimets.fi/" />
+        <meta property="og:type" content="website" />
+        <meta
+            property="og:title"
+            content="Helsinki Mets | Baseball fields in Finland"
+        />
+        <meta
+            property="og:description"
+            content="These are the baseball fields played on by teams in Finland."
+        />
+        <meta
+            property="og:image"
+            content="https://www.helsinkimets.fi/img/field-locs-share.png"
+        />
 
         <link rel="stylesheet" href="reset-styles.css" />
         <link rel="stylesheet" href="global-styles.css" />
         <link rel="stylesheet" href="field-locations.css" />
+        <link rel="stylesheet" href="tail-styles.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.3/gsap.min.js"></script>
+        <script defer src="script.js"></script>
 
         <title>Helsinki Mets | Field Locations</title>
     </head>
     <body class="field-locations-grid">
-        <header>
+        <header class="header-section section" data-section="0">
             <h1 aria-label="Helsinki Mets">
                 <svg class="mets-title">
                     <use xlink:href="img/logo-icons.svg#mets-header-text"></use>
@@ -37,7 +59,11 @@
             </div>
         </header>
 
-        <main class="field-locs-grid" aria-label="field locations section">
+        <main
+            class="field-locs-section section field-locs-grid"
+            aria-label="field locations section"
+            data-section="7"
+        >
             <section aria-label="field details" class="field-card">
                 <div class="field-card-text">
                     <h2>Myllypuro, Helsinki</h2>
@@ -175,7 +201,8 @@
 
         <aside
             aria-label="about section with details about the baseball fields in finland"
-            class="field-locs-aside"
+            class="field-locs-aside section"
+            data-section="8"
         >
             <h3>About</h3>
             <p>
@@ -203,6 +230,8 @@
         </aside>
 
         <footer
+            class="footer-section section"
+            data-section="6"
             aria-label="footer with internal links, external links, social media links, and website author link"
         >
             <div

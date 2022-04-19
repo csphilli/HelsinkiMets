@@ -14,11 +14,6 @@
             href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Oswald:wght@400;500;600;700&display=swap"
             rel="stylesheet"
         />
-
-        <link rel="stylesheet" href="reset-styles.css" />
-        <link rel="stylesheet" href="global-styles.css" />
-        <link rel="stylesheet" href="homepage.css" />
-
         <title>Helsinki Mets | Home</title>
         <!-- Twitter sharing tags -->
         <meta name="twitter:card" content="summary" />
@@ -34,11 +29,23 @@
         />
         <meta
             property="og:image"
-            content="https://www.helsinkimets.fi/img/helsinkimets-homepage.png"
+            content="https://www.helsinkimets.fi/img/mets-thumb.png"
         />
+
+        <link rel="stylesheet" href="reset-styles.css" />
+        <link rel="stylesheet" href="global-styles.css" />
+        <link rel="stylesheet" href="homepage.css" />
+        <link rel="stylesheet" href="tail-styles.css" />
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.3/gsap.min.js"></script>
+        <script defer src="script.js"></script>
     </head>
     <body class="homepage-grid">
-        <header aria-label="Welcome to the helsinki mets webpage">
+        <header
+            data-section="0"
+            class="header-section section"
+            aria-label="Welcome to the helsinki mets webpage"
+        >
             <h1 aria-label="Helsinki Mets">
                 <svg class="mets-title">
                     <use xlink:href="img/logo-icons.svg#mets-header-text"></use>
@@ -57,7 +64,7 @@
             </div>
         </header>
         <main aria-label="main content describing baseball in finland">
-            <section class="hero-section">
+            <section class="hero-section section" data-section="1">
                 <div class="hero-content">
                     <div class="hero-images-collage">
                         <svg
@@ -951,14 +958,18 @@
                 </div>
             </section>
         </main>
-        <aside aria-label="Mets win loss and schedule section">
+        <aside
+            class="win-loss-section section"
+            aria-label="Mets win loss and schedule section"
+            data-section="2"
+        >
             <div
                 aria-label="current season win and loss results for the helsinki mets"
                 class="win-loss-container"
             >
-                <h4 aria-label="wins" data-wins="wins">W</h4>
+                <h4 aria-label="wins" data-wins="0">W</h4>
                 <h5>&nbsp;:&nbsp;</h5>
-                <h4 aria-label="losses" data-wins="losses">L</h4>
+                <h4 aria-label="losses" data-losses="0">L</h4>
             </div>
             <div
                 aria-label="Current season schedule section"
@@ -1169,7 +1180,8 @@
         </aside>
         <section
             aria-label="about section for the helsinki mets"
-            class="about-section"
+            class="about-section section"
+            data-section="3"
         >
             <div class="about-text-container">
                 <h3>Who are the Helsinki Mets?</h3>
@@ -1194,7 +1206,7 @@
                 </p>
             </div>
         </section>
-        <section class="contact-section" id="contact">
+        <section class="contact-section section" data-section="4">
             <div class="contact-text">
                 <h3>Questions? Interested in playing?</h3>
                 <p>
@@ -1260,7 +1272,11 @@
                 </button>
             </form>
         </section>
-        <section aria-label="league sponsors section" class="sponsors-section">
+        <section
+            aria-label="league sponsors section"
+            class="sponsors-section section"
+            data-section="5"
+        >
             <div class="sponsors-text">
                 <h3>League Sponsors</h3>
                 <p>
@@ -1373,6 +1389,8 @@
             </div>
         </section>
         <footer
+            class="footer-section section"
+            data-section="6"
             aria-label="footer with internal links, external links, social media links, and website author link"
         >
             <div
