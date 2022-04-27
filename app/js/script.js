@@ -3,11 +3,11 @@
 const dataSections = document.querySelectorAll("[data-section]");
 const allSections = document.querySelectorAll(".section");
 const minWidth = 720;
-// let custDirection = "x";
+let axis = "x";
 
-// if (window.innerWidth <= 720) {
-//     custDirection = "y";
-// }
+if (window.innerWidth <= minWidth) {
+    axis = "y";
+}
 
 // console.log(custDirection);
 
@@ -92,111 +92,56 @@ const animateHero = () => {
 
 const animateWinLoss = () => {
     const wl = gsap.timeline();
-    if (window.innerWidth <= minWidth) {
-        wl.from(".win-loss-container", {
-            opacity: 0,
-            duration: 0.3,
-            y: 150,
-            ease: Power4.easeOut,
-        })
+    wl.from(".win-loss-container", {
+        opacity: 0,
+        duration: 0.3,
+        [axis]: 150,
+        ease: Power4.easeOut,
+    })
 
-            .from(
-                ".schedule-text-content h3",
-                {
-                    opacity: 0,
-                    duration: 0.3,
-                    y: 150,
-                    ease: Power4.easeOut,
-                },
-                "-=.3"
-            )
+        .from(
+            ".schedule-text-content h3",
+            {
+                opacity: 0,
+                duration: 0.3,
+                [axis]: 150,
+                ease: Power4.easeOut,
+            },
+            "-=.3"
+        )
 
-            .from(
-                ".schedule-text-content p",
-                {
-                    opacity: 0,
-                    duration: 0.3,
-                    y: 150,
-                    ease: Power4.easeOut,
-                    stagger: 0.1,
-                },
-                "-=.3"
-            )
-            .from(
-                ".schedule-grid",
-                {
-                    opacity: 0,
-                    duration: 0.3,
-                    y: 150,
-                    ease: Power4.easeOut,
-                },
-                "-=.3"
-            )
-            .from(
-                ".grid-col",
-                {
-                    opacity: 0,
-                    duration: 0.3,
-                    y: 150,
-                    ease: Power4.easeOut,
-                    stagger: 0.08,
-                },
-                "-=.3"
-            );
-    } else {
-        wl.from(".win-loss-container", {
-            opacity: 0,
-            duration: 0.3,
-            x: 150,
-            ease: Power4.easeOut,
-        })
-
-            .from(
-                ".schedule-text-content h3",
-                {
-                    opacity: 0,
-                    duration: 0.3,
-                    x: 150,
-                    ease: Power4.easeOut,
-                },
-                "-=.3"
-            )
-
-            .from(
-                ".schedule-text-content p",
-                {
-                    opacity: 0,
-                    duration: 0.3,
-                    x: 150,
-                    ease: Power4.easeOut,
-                    stagger: 0.1,
-                },
-                "-=.3"
-            )
-
-            .from(
-                ".schedule-grid",
-                {
-                    opacity: 0,
-                    duration: 0.3,
-                    x: 150,
-                    ease: Power4.easeOut,
-                },
-                "-=.3"
-            )
-
-            .from(
-                ".grid-col",
-                {
-                    opacity: 0,
-                    duration: 0.3,
-                    x: 150,
-                    ease: Power4.easeOut,
-                    stagger: 0.08,
-                },
-                "-=.3"
-            );
-    }
+        .from(
+            ".schedule-text-content p",
+            {
+                opacity: 0,
+                duration: 0.3,
+                [axis]: 150,
+                ease: Power4.easeOut,
+                stagger: 0.1,
+            },
+            "-=.3"
+        )
+        .from(
+            ".schedule-grid",
+            {
+                opacity: 0,
+                duration: 0.3,
+                [axis]: 150,
+                ease: Power4.easeOut,
+            },
+            "-=.3"
+        )
+        .from(
+            ".grid-col",
+            {
+                opacity: 0,
+                duration: 0.3,
+                [axis]: 150,
+                ease: Power4.easeOut,
+                stagger: 0.08,
+            },
+            "-=.3"
+        );
 };
 
 const animateAbout = () => {
@@ -220,65 +165,34 @@ const animateContact = () => {
 const animateSponsors = () => {
     const sp = gsap.timeline();
     const offset = "-=.7";
-    if (window.innerWidth <= minWidth) {
-        sp.from(".sponsors-text h3", {
-            opacity: 0,
-            duration: 1,
-            y: 150,
-            ease: Power4.easeOut,
-        })
-            .from(
-                ".sponsors-text p",
-                {
-                    opacity: 0,
-                    duration: 1,
-                    y: 150,
-                    ease: Power4.easeOut,
-                    stagger: 0.25,
-                },
-                offset
-            )
-            .from(
-                ".sponsor-icon",
-                {
-                    opacity: 0,
-                    duration: 0.5,
-                    y: 150,
-                    ease: Power4.easeOut,
-                    stagger: 0.1,
-                },
-                offset
-            );
-    } else {
-        sp.from(".sponsors-text h3", {
-            opacity: 0,
-            duration: 1,
-            x: 150,
-            ease: Power4.easeOut,
-        })
-            .from(
-                ".sponsors-text p",
-                {
-                    opacity: 0,
-                    duration: 1,
-                    x: 150,
-                    ease: Power4.easeOut,
-                    stagger: 0.25,
-                },
-                offset
-            )
-            .from(
-                ".sponsor-icon",
-                {
-                    opacity: 0,
-                    duration: 0.5,
-                    x: 150,
-                    ease: Power4.easeOut,
-                    stagger: 0.1,
-                },
-                offset
-            );
-    }
+    sp.from(".sponsors-text h3", {
+        opacity: 0,
+        duration: 1,
+        [axis]: 150,
+        ease: Power4.easeOut,
+    })
+        .from(
+            ".sponsors-text p",
+            {
+                opacity: 0,
+                duration: 1,
+                [axis]: 150,
+                ease: Power4.easeOut,
+                stagger: 0.25,
+            },
+            offset
+        )
+        .from(
+            ".sponsor-icon",
+            {
+                opacity: 0,
+                duration: 0.5,
+                [axis]: 150,
+                ease: Power4.easeOut,
+                stagger: 0.1,
+            },
+            offset
+        );
 };
 
 const animateFooter = () => {

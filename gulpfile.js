@@ -73,3 +73,5 @@ exports.default = series(
     browserSyncServe,
     watchTask
 );
+
+exports.build = series(scssTask, jsTask, minHtml);
