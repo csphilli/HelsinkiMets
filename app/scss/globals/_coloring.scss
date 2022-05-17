@@ -64,3 +64,15 @@ footer {
         background-color: $schedule-even-rows;
     }
 }
+
+.result:visited,
+.result:link {
+    color: $bg-color-dark-shade1;
+}
+
+.result:hover,
+.result:active {
+    cursor: pointer;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
